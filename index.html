@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Return Analysis</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Product Return & Cancellation Analysis</h1>
+    <p>Retail Transaction Monitoring Dashboard</p>
+</header>
+
+<main>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Invoices</h3>
+            <h2 id="total">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Cancellation Invoices</h3>
+            <h2 id="cancel">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Negative Quantity Records</h3>
+            <h2 id="negative">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Flagged Records</h3>
+            <h2 id="flagged">0</h2>
+        </div>
+
+    </section>
+
+    <section class="charts">
+
+        <div class="chart-box">
+            <h2>Monthly Return Patterns</h2>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h2>Top 10 Products</h2>
+            <canvas id="productChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h2>Country-wise Analysis</h2>
+            <canvas id="countryChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h2>Top 10 Customers</h2>
+            <canvas id="customerChart"></canvas>
+        </div>
+
+    </section>
+
+    <section class="table-section">
+
+        <h2>Records Requiring Investigation</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search transaction..."
+        >
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice No</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+
+                <tbody id="records"></tbody>
+            </table>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
