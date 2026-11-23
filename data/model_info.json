@@ -1,0 +1,167 @@
+{
+  "name": "Random Forest",
+  "cv_pr_auc": {
+    "Logistic Regression": 0.4646,
+    "Gradient Boosting": 0.7635,
+    "Random Forest": 0.7587
+  },
+  "test": {
+    "threshold": 0.7227,
+    "accuracy": 0.9162,
+    "precision": 0.6766,
+    "recall": 0.8318,
+    "f1": 0.7462,
+    "roc_auc": 0.9514,
+    "pr_auc": 0.7561,
+    "confusion": {
+      "tn": 4108,
+      "fp": 305,
+      "fn": 129,
+      "tp": 638
+    }
+  },
+  "train_rows": 20720,
+  "test_rows": 5180,
+  "cancel_rate": 0.1481,
+  "countries": [
+    "Australia",
+    "Austria",
+    "Bahrain",
+    "Belgium",
+    "Brazil",
+    "Canada",
+    "Channel Islands",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "EIRE",
+    "European Community",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Hong Kong",
+    "Iceland",
+    "Israel",
+    "Italy",
+    "Japan",
+    "Lebanon",
+    "Lithuania",
+    "Malta",
+    "Netherlands",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "RSA",
+    "Saudi Arabia",
+    "Singapore",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "USA",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Unspecified"
+  ],
+  "cleaning": {
+    "raw_rows": 541909,
+    "duplicates_removed": 5268,
+    "unparseable_dates": 0,
+    "rows_kept": 536641,
+    "missing_customer": 135037,
+    "missing_description": 1454,
+    "non_product_rows": 2989,
+    "zero_or_negative_price": 2512,
+    "cancelled_lines": 9251,
+    "negative_not_cancelled": 1336
+  },
+  "line_model": {
+    "name": "Logistic Regression",
+    "window_days": 60,
+    "val_pr_auc": {
+      "Logistic Regression": 0.118,
+      "Gradient Boosting": 0.0941
+    },
+    "test": {
+      "threshold": 0.9349,
+      "precision": 0.117,
+      "recall": 0.1521,
+      "f1": 0.1323,
+      "roc_auc": 0.7651,
+      "pr_auc": 0.0821,
+      "lift_top10": 3.81,
+      "confusion": {
+        "tn": 65558,
+        "fp": 1910,
+        "fn": 1410,
+        "tp": 253
+      }
+    },
+    "base_rate": 0.0241,
+    "baseline_pr_auc": {
+      "Product's past return rate alone": 0.0553,
+      "Customer's past return rate alone": 0.0482
+    },
+    "importances": [
+      {
+        "feature": "Customer order history",
+        "importance": 0.0354
+      },
+      {
+        "feature": "Product's past return rate",
+        "importance": 0.0161
+      },
+      {
+        "feature": "Unit price",
+        "importance": 0.0101
+      },
+      {
+        "feature": "Quantity bought",
+        "importance": 0.0097
+      },
+      {
+        "feature": "Basket size",
+        "importance": 0.0037
+      },
+      {
+        "feature": "Customer's past return rate",
+        "importance": 0.0033
+      },
+      {
+        "feature": "Hour of day",
+        "importance": 0.0003
+      },
+      {
+        "feature": "Weekday",
+        "importance": 0.0
+      },
+      {
+        "feature": "UK customer",
+        "importance": 0.0
+      },
+      {
+        "feature": "Product sales history",
+        "importance": -0.004
+      }
+    ],
+    "rows": {
+      "train": 154575,
+      "test": 69131,
+      "positives_test": 1663
+    },
+    "test_period_start": "12 Aug 2011",
+    "label": "A sold line counts as returned if the same customer sends back the same product within 60 days."
+  },
+  "segments": {
+    "k": 3,
+    "silhouette": 0.393
+  },
+  "anomalies": {
+    "flagged": 259,
+    "invoices": 25900
+  },
+  "period": {
+    "start": "01 Dec 2010",
+    "end": "09 Dec 2011"
+  }
+}

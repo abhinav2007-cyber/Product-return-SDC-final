@@ -1,0 +1,200 @@
+{
+  "info": {
+    "_postman_id": "c1f7a01a-8e2b-42be-bc55-8dbfca275c91",
+    "name": "Returns API",
+    "description": "Postman collection for testing the Product Return and Cancellation Pattern Analysis FastAPI deployment.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Health status is ok\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.status).to.eql(\"ok\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "API Summary KPIs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/summary",
+          "host": ["{{base_url}}"],
+          "path": ["api", "summary"]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Summary has expected fields\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property(\"total_invoices\");",
+              "    pm.expect(jsonData).to.have.property(\"cancellations\");",
+              "    pm.expect(jsonData).to.have.property(\"cancellation_rate\");",
+              "    pm.expect(jsonData).to.have.property(\"flagged_records\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Predict Invoice Cancellation (Valid)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"line_count\": 8,\n  \"unique_products\": 8,\n  \"total_abs_quantity\": 60,\n  \"average_unit_price\": 3.5,\n  \"month\": 6,\n  \"weekday\": 2,\n  \"hour\": 12,\n  \"country\": \"United Kingdom\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/predict",
+          "host": ["{{base_url}}"],
+          "path": ["predict"]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Probability exists and is between 0 and 1\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property(\"probability\");",
+              "    pm.expect(jsonData.probability).to.be.at.least(0);",
+              "    pm.expect(jsonData.probability).to.be.at.most(1);",
+              "    pm.expect(jsonData).to.have.property(\"prediction\");",
+              "    pm.expect(jsonData).to.have.property(\"risk\");",
+              "    pm.expect(jsonData).to.have.property(\"threshold\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Predict Invoice Cancellation (Invalid 422)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"line_count\": 8,\n  \"unique_products\": 8,\n  \"total_abs_quantity\": 60,\n  \"average_unit_price\": 3.5,\n  \"month\": 6,\n  \"weekday\": 2,\n  \"hour\": 30,\n  \"country\": \"United Kingdom\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/predict",
+          "host": ["{{base_url}}"],
+          "path": ["predict"]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 422\", function () {",
+              "    pm.response.to.have.status(422);",
+              "});",
+              "pm.test(\"Validation error reports invalid hour\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property(\"errors\");",
+              "    pm.expect(jsonData.errors).to.have.property(\"hour\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Predict Line Return Risk (Valid)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"stock_code\": \"85123A\",\n  \"quantity\": 6,\n  \"unit_price\": 2.55,\n  \"basket_size\": 12,\n  \"hour\": 14,\n  \"weekday\": 2,\n  \"country\": \"United Kingdom\",\n  \"customer_id\": 17850\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/predict/return-risk",
+          "host": ["{{base_url}}"],
+          "path": ["predict", "return-risk"]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Line return probability exists and is between 0 and 1\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property(\"probability_returned_within_60_days\");",
+              "    pm.expect(jsonData.probability_returned_within_60_days).to.be.at.least(0);",
+              "    pm.expect(jsonData.probability_returned_within_60_days).to.be.at.most(1);",
+              "    pm.expect(jsonData).to.have.property(\"known_product\");",
+              "    pm.expect(jsonData.known_product).to.eql(true);",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

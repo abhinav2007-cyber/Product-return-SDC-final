@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns &amp; Cancellations - Retail Pattern Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="top">
+    <div>
+        <h1>Returns &amp; Cancellations</h1>
+        <p>Retail transaction monitoring &amp; predictive pattern analysis</p>
+        <nav class="nav-tabs" aria-label="Stakeholder views">
+            <a href="#overview" class="nav-tab active">Overview</a>
+            <a href="#merchandising" class="nav-tab">Products</a>
+            <a href="#customers" class="nav-tab">Customers</a>
+            <a href="#finance" class="nav-tab">Finance &amp; Risk</a>
+            <a href="#method" class="nav-tab">Method</a>
+        </nav>
+    </div>
+    <p class="period" id="period"></p>
+</header>
+
+<div id="error" class="error" role="alert" hidden></div>
+
+<main>
+    <!-- View 1: Leadership and Operations (#overview) -->
+    <div id="view-overview" class="view-panel">
+        <section class="kpis" aria-label="Key figures">
+            <div><span>Invoices</span><strong id="k-total">–</strong></div>
+            <div><span>Cancelled invoices</span><strong id="k-cancel">–</strong><small id="k-rate"></small></div>
+            <div><span>Negative-quantity lines</span><strong id="k-negative">–</strong></div>
+            <div><span>Flagged lines</span><strong id="k-flagged">–</strong></div>
+            <div><span>Value returned</span><strong id="k-value">–</strong></div>
+        </section>
+
+        <section class="grid" style="margin-top: 20px;">
+            <article class="panel">
+                <h2>Returns by month</h2>
+                <p class="note" id="n-monthly"></p>
+                <div class="plot"><canvas id="monthlyChart"></canvas></div>
+            </article>
+            <article class="panel">
+                <h2>Returns by country</h2>
+                <label class="check"><input type="checkbox" id="noUK"> Hide United Kingdom to compare the rest</label>
+                <div class="plot"><canvas id="countryChart"></canvas></div>
+            </article>
+        </section>
+    </div>
+
+    <!-- View 2: Buying and Merchandising (#merchandising) -->
+    <div id="view-merchandising" class="view-panel" hidden>
+        <section class="grid">
+            <article class="panel" style="grid-column: 1 / -1;">
+                <h2>Most-returned products</h2>
+                <p class="note" id="n-products"></p>
+                <div class="plot" style="height: 380px;"><canvas id="productChart"></canvas></div>
+            </article>
+        </section>
+        <section class="panel" style="margin-top: 20px;">
+            <div class="table-head">
+                <h2>Product Return Catalogue</h2>
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <input type="search" id="productSearch" placeholder="Search product description..." style="max-width: 240px;">
+                    <a id="productExportLink" class="button" href="/api/products.csv">Download CSV</a>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th class="num">Total Lines</th>
+                            <th class="num">Total Qty</th>
+                            <th class="num">Negative Lines</th>
+                            <th class="num">Return Rate</th>
+                            <th>Insight</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- View 3: Customer Service and CRM (#customers) -->
+    <div id="view-customers" class="view-panel" hidden>
+        <section class="grid">
+            <article class="panel">
+                <h2>Customers with most returns</h2>
+                <p class="note" id="n-customers"></p>
+                <div class="plot"><canvas id="customerChart"></canvas></div>
+            </article>
+            <article class="panel">
+                <h2>Customer segments</h2>
+                <p class="note" id="n-seg"></p>
+                <div class="plot"><canvas id="segmentChart"></canvas></div>
+            </article>
+        </section>
+        <section class="panel" style="margin-top: 20px;">
+            <h2>Cluster Profiles</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Segment</th>
+                            <th class="num">Customers</th>
+                            <th class="num">Median invoices</th>
+                            <th class="num">Return rate</th>
+                            <th class="num">Share of returned value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="segTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- View 4: Finance, Fraud and Audit (#finance) -->
+    <div id="view-finance" class="view-panel" hidden>
+        <section class="panel">
+            <h2>Unusually large invoices (Isolation Forest)</h2>
+            <p class="note" id="n-anom"></p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Type</th>
+                            <th class="num">Units</th>
+                            <th class="num">Value</th>
+                            <th>Why flagged</th>
+                        </tr>
+                    </thead>
+                    <tbody id="anomTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top: 20px;">
+            <div class="table-head">
+                <h2>Records to investigate</h2>
+                <a id="exportLink" class="button" href="/api/records.csv">Download CSV</a>
+            </div>
+            <div class="filters">
+                <input type="search" id="search" placeholder="Search invoice, product, customer or country" aria-label="Search records">
+                <select id="countryFilter" aria-label="Filter by country"><option value="">All countries</option></select>
+                <select id="reasonFilter" aria-label="Filter by reason">
+                    <option value="">All reasons</option>
+                    <option>Cancellation invoice</option>
+                    <option>Negative quantity</option>
+                    <option>Zero or negative price</option>
+                </select>
+                <select id="monthFilter" aria-label="Filter by month">
+                    <option value="0">All months</option>
+                    <option value="1">January</option><option value="2">February</option>
+                    <option value="3">March</option><option value="4">April</option>
+                    <option value="5">May</option><option value="6">June</option>
+                    <option value="7">July</option><option value="8">August</option>
+                    <option value="9">September</option><option value="10">October</option>
+                    <option value="11">November</option><option value="12">December</option>
+                </select>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-sort="InvoiceNo">Invoice</th>
+                            <th data-sort="InvoiceDate">Date</th>
+                            <th data-sort="Description">Product</th>
+                            <th data-sort="Quantity" class="num">Qty</th>
+                            <th data-sort="UnitPrice" class="num">Unit price</th>
+                            <th data-sort="Country">Country</th>
+                            <th>Reason</th>
+                            <th class="num">Cancel Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody id="records"></tbody>
+                </table>
+            </div>
+            <div class="pager">
+                <span id="pageInfo"></span>
+                <div>
+                    <button type="button" id="prev">Previous</button>
+                    <button type="button" id="next">Next</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- View 5: Course Reviewers and Methodology (#method) -->
+    <div id="view-method" class="view-panel" hidden>
+        <section class="panel" id="lineModel">
+            <h2>Will a sold item come back? (Defensible Target)</h2>
+            <p class="note" id="lm-label"></p>
+            <div class="lm">
+                <div>
+                    <dl class="facts" id="lm-facts"></dl>
+                    <p class="note" id="lm-caveat"></p>
+                </div>
+                <div>
+                    <h3>What drives the prediction</h3>
+                    <div class="plot short"><canvas id="importanceChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel predictor" style="margin-top: 20px;">
+            <div>
+                <h2>Classify an invoice</h2>
+                <p class="note">Baseline model: does an invoice with these details look like a cancellation? It describes the invoice; it does not predict the future.</p>
+                <form id="predictForm" novalidate>
+                    <label>Line items<input name="line_count" type="number" min="1" value="8"></label>
+                    <label>Unique products<input name="unique_products" type="number" min="1" value="8"></label>
+                    <label>Total units<input name="total_abs_quantity" type="number" min="1" value="60"></label>
+                    <label>Average unit price (£)<input name="average_unit_price" type="number" min="0" step="0.01" value="3.5"></label>
+                    <label>Month<select name="month"></select></label>
+                    <label>Weekday<select name="weekday"></select></label>
+                    <label>Hour (0–23)<input name="hour" type="number" min="0" max="23" value="12"></label>
+                    <label>Country<select name="country" id="countrySelect"></select></label>
+                    <button type="submit">Estimate risk</button>
+                </form>
+            </div>
+            <div class="result" id="result" aria-live="polite">
+                <p class="empty">Results appear here.</p>
+            </div>
+            <div class="model" id="model"></div>
+        </section>
+
+        <section class="panel" style="margin-top: 20px;">
+            <h2>How the data was cleaned</h2>
+            <dl class="facts" id="cleaning" style="margin-top: 12px;"></dl>
+        </section>
+
+        <!-- Feature 5: ML Model Comparison -->
+        <section class="panel" style="margin-top: 20px;" id="modelComparison">
+            <h2>Model Selection: Why Random Forest?</h2>
+            <p class="note" id="mc-why"></p>
+            <div class="grid" style="margin-top:16px;">
+                <div>
+                    <h3 style="font-size:.95rem;font-weight:600;margin-bottom:8px;">CV PR AUC by candidate model</h3>
+                    <div class="plot short"><canvas id="modelCompChart"></canvas></div>
+                </div>
+                <div>
+                    <h3 style="font-size:.95rem;font-weight:600;margin-bottom:8px;">Score table</h3>
+                    <div class="table-wrap" style="margin-top:0;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th class="num">CV PR AUC</th>
+                                    <th>Selected</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modelCompTable"></tbody>
+                        </table>
+                    </div>
+                    <p class="note" style="margin-top:12px;">PR AUC = area under the Precision-Recall curve, averaged over 5 cross-validation folds on the training set. Higher is better for imbalanced datasets.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<script src="/static/script.js"></script>
+</body>
+</html>

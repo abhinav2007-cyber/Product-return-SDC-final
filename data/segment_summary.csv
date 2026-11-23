@@ -1,0 +1,4 @@
+segment,customers,median_invoices,median_basket,return_line_rate,returned_value,share_of_returned_value
+Heavy returners,51,2.0,2.5,0.7662,260184.23,0.5515
+Frequent buyers,1550,6.0,13.1082,0.0571,211566.48,0.4485
+Bulk buyers,2762,2.0,16.1667,0.0,0.0,0.0
