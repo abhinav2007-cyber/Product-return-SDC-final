@@ -1,0 +1,112 @@
+{
+  "page": 1,
+  "pages": 280,
+  "rows": [
+    {
+      "Description": "REGENCY CAKESTAND 3 TIER",
+      "negative_records": 180,
+      "return_rate": 0.0822,
+      "total_quantity": 13007,
+      "total_records": 2189
+    },
+    {
+      "Description": "check",
+      "negative_records": 120,
+      "return_rate": 0.7547,
+      "total_quantity": -12030,
+      "total_records": 159
+    },
+    {
+      "Description": "JAM MAKING SET WITH JARS",
+      "negative_records": 87,
+      "return_rate": 0.0713,
+      "total_quantity": 8459,
+      "total_records": 1221
+    },
+    {
+      "Description": "SET OF 3 CAKE TINS PANTRY DESIGN ",
+      "negative_records": 73,
+      "return_rate": 0.0498,
+      "total_quantity": 7329,
+      "total_records": 1465
+    },
+    {
+      "Description": "ROSES REGENCY TEACUP AND SAUCER ",
+      "negative_records": 54,
+      "return_rate": 0.0479,
+      "total_quantity": 9428,
+      "total_records": 1128
+    },
+    {
+      "Description": "STRAWBERRY CERAMIC TRINKET BOX",
+      "negative_records": 54,
+      "return_rate": 0.0706,
+      "total_quantity": 10112,
+      "total_records": 765
+    },
+    {
+      "Description": "RECIPE BOX PANTRY YELLOW DESIGN",
+      "negative_records": 47,
+      "return_rate": 0.0401,
+      "total_quantity": 8139,
+      "total_records": 1173
+    },
+    {
+      "Description": "damages",
+      "negative_records": 45,
+      "return_rate": 1.0,
+      "total_quantity": -4338,
+      "total_records": 45
+    },
+    {
+      "Description": "LUNCH BAG RED RETROSPOT",
+      "negative_records": 44,
+      "return_rate": 0.0271,
+      "total_quantity": 18658,
+      "total_records": 1625
+    },
+    {
+      "Description": "JUMBO BAG RED RETROSPOT",
+      "negative_records": 44,
+      "return_rate": 0.0204,
+      "total_quantity": 47260,
+      "total_records": 2156
+    },
+    {
+      "Description": "WOOD 2 DRAWER CABINET WHITE FINISH",
+      "negative_records": 42,
+      "return_rate": 0.0714,
+      "total_quantity": 2183,
+      "total_records": 588
+    },
+    {
+      "Description": "RED RETROSPOT CAKE STAND",
+      "negative_records": 42,
+      "return_rate": 0.072,
+      "total_quantity": 1690,
+      "total_records": 583
+    },
+    {
+      "Description": "WHITE HANGING HEART T-LIGHT HOLDER",
+      "negative_records": 42,
+      "return_rate": 0.0178,
+      "total_quantity": 35298,
+      "total_records": 2357
+    },
+    {
+      "Description": "GREEN REGENCY TEACUP AND SAUCER",
+      "negative_records": 42,
+      "return_rate": 0.0394,
+      "total_quantity": 7137,
+      "total_records": 1066
+    },
+    {
+      "Description": "damaged",
+      "negative_records": 42,
+      "return_rate": 0.9767,
+      "total_quantity": -1632,
+      "total_records": 43
+    }
+  ],
+  "total": 4198
+}

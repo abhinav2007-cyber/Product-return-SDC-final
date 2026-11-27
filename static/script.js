@@ -5,6 +5,12 @@ const css = (name) => getComputedStyle(document.documentElement).getPropertyValu
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
+let activeDatasetId = "default";
+function withDataset(url) {
+    const sep = url.includes("?") ? "&" : "?";
+    return `${url}${sep}dataset_id=${encodeURIComponent(activeDatasetId)}`;
+}
+
 async function getJSON(url, options) {
     const res = await fetch(url, options);
     const body = await res.json().catch(() => ({}));
@@ -24,8 +30,8 @@ const monthLabel = (ym) => {
     return `${MONTHS[Number(m) - 1]} ${y}`;
 };
 
-/* ---------- View Router (#overview, #merchandising, #customers, #finance, #method) ---------- */
-const VIEWS = ["overview", "merchandising", "customers", "finance", "method"];
+/* ---------- View Router (#overview, #merchandising, #customers, #finance, #method, #upload) ---------- */
+const VIEWS = ["overview", "merchandising", "customers", "finance", "method", "upload"];
 function updateView() {
     const hash = (window.location.hash || "#overview").replace("#", "").toLowerCase();
     const active = VIEWS.includes(hash) ? hash : "overview";
@@ -124,12 +130,49 @@ function renderCharts(d) {
 }
 
 function selectCustomer(cid) {
-    window.location.hash = "#finance";
-    const sInput = $("search");
-    if (sInput) {
-        sInput.value = cid;
-        resetAndLoad();
+    openCustomerDrawer(cid);
+}
+
+async function openCustomerDrawer(cid) {
+    const drawer = $("customerDrawer");
+    const backdrop = $("drawerBackdrop");
+    if (!drawer || !backdrop) return;
+    try {
+        const data = await getJSON(withDataset(`/api/customers/${encodeURIComponent(cid)}`));
+        const c = data.customer;
+        $("drawerTitle").textContent = `Customer ${c.CustomerID}`;
+        $("drawerSegment").textContent = `Segment: ${c.segment}`;
+        facts($("drawerFacts"), [
+            ["Total invoices", nf.format(c.total_invoices)],
+            ["Total lines", nf.format(c.total_lines)],
+            ["Negative lines", nf.format(c.negative_records)],
+            ["Return rate", pct1(c.return_rate)],
+            ["Net spending", money.format(c.total_spending)],
+        ]);
+        const tbody = $("drawerRecords");
+        tbody.replaceChildren();
+        const recs = data.recent_flagged_records || [];
+        if (!recs.length) {
+            tbody.innerHTML = `<tr class="empty-row"><td colspan="5">No flagged records for this customer.</td></tr>`;
+        } else {
+            recs.forEach((r) => {
+                addRow(tbody, [r.InvoiceNo, String(r.InvoiceDate).slice(0, 10), trunc(r.Description, 28), nf.format(r.Quantity), r.Reason], [3]);
+            });
+        }
+        drawer.hidden = false;
+        backdrop.hidden = false;
+    } catch (err) {
+        showError(`Could not load customer ${cid}: ${err.message}`);
     }
+}
+
+function setupCustomerDrawer() {
+    const closeBtn = $("drawerClose");
+    const backdrop = $("drawerBackdrop");
+    const drawer = $("customerDrawer");
+    const close = () => { if (drawer) drawer.hidden = true; if (backdrop) backdrop.hidden = true; };
+    if (closeBtn) closeBtn.addEventListener("click", close);
+    if (backdrop) backdrop.addEventListener("click", close);
 }
 
 /* ---------- KPIs and model ---------- */
@@ -249,13 +292,13 @@ function renderCleaning(c) {
 /* ---------- Products Table (Merchandising View) ---------- */
 async function loadProducts(q = "") {
     try {
-        const data = await getJSON(`/api/products?q=${encodeURIComponent(q)}&per_page=10`);
+        const data = await getJSON(withDataset(`/api/products?q=${encodeURIComponent(q)}&per_page=10`));
         const tbody = $("productTableBody");
         if (!tbody) return;
         tbody.replaceChildren();
         // Feature 4: Update product CSV download link with current query
         const pLink = $("productExportLink");
-        if (pLink) pLink.href = `/api/products.csv?q=${encodeURIComponent(q)}`;
+        if (pLink) pLink.href = withDataset(`/api/products.csv?q=${encodeURIComponent(q)}`);
         if (!data.rows.length) {
             const tr = tbody.insertRow();
             const td = tr.insertCell();
@@ -384,7 +427,7 @@ function queryString(extra = {}) {
 
 async function loadRecords() {
     try {
-        const data = await getJSON(`/api/records?${queryString({ page: state.page, sort: state.sort, dir: state.dir })}`);
+        const data = await getJSON(withDataset(`/api/records?${queryString({ page: state.page, sort: state.sort, dir: state.dir })}`));
         state.page = data.page;
         const tbody = $("records");
         tbody.replaceChildren();
@@ -424,7 +467,7 @@ async function loadRecords() {
         $("pageInfo").textContent = `${nf.format(data.total)} records · page ${data.page} of ${data.pages}`;
         $("prev").disabled = data.page <= 1;
         $("next").disabled = data.page >= data.pages;
-        $("exportLink").href = `/api/records.csv?${queryString({ sort: state.sort, dir: state.dir })}`;
+        $("exportLink").href = withDataset(`/api/records.csv?${queryString({ sort: state.sort, dir: state.dir })}`);
     } catch (err) {
         showError(err.message);
     }
@@ -502,15 +545,165 @@ function renderModelComparison(mc) {
     }
 }
 
+/* ---------- Dataset Switcher ---------- */
+function setupDatasetSwitcher() {
+    const sel = $("datasetSelector");
+    if (!sel) return;
+    getJSON("/api/datasets").then((data) => {
+        const datasets = data.datasets || [];
+        sel.replaceChildren();
+        datasets.forEach((ds) => {
+            const opt = new Option(ds.label || ds.id, ds.id);
+            sel.appendChild(opt);
+        });
+        sel.value = activeDatasetId;
+    }).catch(() => {});
+
+    sel.addEventListener("change", async () => {
+        activeDatasetId = sel.value;
+        try {
+            const [summary, chartData, segs, anoms, insights] = await Promise.all([
+                getJSON(withDataset("/api/summary")),
+                getJSON(withDataset("/api/charts")),
+                getJSON(withDataset("/api/segments")),
+                getJSON(withDataset("/api/anomalies")),
+                getJSON(withDataset("/api/insights")),
+            ]);
+            renderSummary(summary);
+            renderInsightsStrip(insights);
+            renderCharts(chartData);
+            renderSegments(segs);
+            renderAnomalies(anoms);
+        } catch (err) {
+            showError("Dataset switch failed: " + err.message);
+        }
+        loadRecords();
+        loadProducts();
+    });
+}
+
+/* ---------- Theme Toggle ---------- */
+function setupThemeToggle() {
+    const btn = $("themeToggle");
+    if (!btn) return;
+    const html = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved) html.dataset.theme = saved;
+    btn.textContent = (html.dataset.theme === "light") ? "🌙" : "☀️";
+
+    btn.addEventListener("click", () => {
+        const isDark = html.dataset.theme !== "light";
+        html.dataset.theme = isDark ? "light" : "dark";
+        localStorage.setItem("theme", html.dataset.theme);
+        btn.textContent = isDark ? "🌙" : "☀️";
+        setTimeout(() => {
+            Chart.defaults.color = css("--muted");
+            Object.values(charts).forEach((c) => { if (c && typeof c.update === "function") c.update(); });
+        }, 50);
+    });
+}
+
+/* ---------- Dual Predictor Tabs ---------- */
+function setupDualPredictor(countries) {
+    const tabInvoice = $("tabInvoicePred");
+    const tabLine = $("tabLinePred");
+    const wrapInvoice = $("invoicePredWrap");
+    const wrapLine = $("linePredWrap");
+
+    if (tabInvoice && tabLine && wrapInvoice && wrapLine) {
+        tabInvoice.addEventListener("click", () => {
+            tabInvoice.classList.add("active"); tabLine.classList.remove("active");
+            wrapInvoice.hidden = false; wrapLine.hidden = true;
+        });
+        tabLine.addEventListener("click", () => {
+            tabLine.classList.add("active"); tabInvoice.classList.remove("active");
+            wrapLine.hidden = false; wrapInvoice.hidden = true;
+        });
+    }
+
+    const lineForm = $("linePredictForm");
+    if (lineForm) {
+        const lineCountrySel = lineForm.elements["country"];
+        if (lineCountrySel && countries && countries.length) {
+            fillSelect(lineCountrySel, countries.map((c) => [c, c]));
+            lineCountrySel.value = countries.includes("United Kingdom") ? "United Kingdom" : countries[0];
+        }
+        const weekdaySel = lineForm.elements["weekday"];
+        if (weekdaySel) fillSelect(weekdaySel, DAYS.map((d, i) => [i, d]));
+
+        lineForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            lineForm.querySelectorAll(".field-error").forEach((n) => n.remove());
+            lineForm.querySelectorAll(".invalid").forEach((n) => n.classList.remove("invalid"));
+            const btn = lineForm.querySelector("button[type='submit']");
+            if (btn) btn.disabled = true;
+            try {
+                const raw = Object.fromEntries(new FormData(lineForm));
+                const payload = {
+                    stock_code: String(raw.stock_code || "").trim(),
+                    quantity: Number(raw.quantity),
+                    unit_price: Number(raw.unit_price),
+                    basket_size: Number(raw.basket_size),
+                    hour: Number(raw.hour),
+                    weekday: Number(raw.weekday),
+                    country: raw.country,
+                    customer_id: raw.customer_id ? Number(raw.customer_id) : null,
+                };
+
+                const r = await getJSON("/predict/return-risk", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                });
+                const p = r.probability_returned_within_60_days ?? 0;
+                const thresh = r.threshold ?? 0.5;
+                const riskLabel = r.flagged ? "High" : (p >= thresh * 0.6 ? "Medium" : "Low");
+                const resBox = $("result");
+                if (resBox) {
+                    resBox.replaceChildren();
+                    const pct = document.createElement("div");
+                    pct.className = `pct risk-${riskLabel}`;
+                    pct.textContent = `${(p * 100).toFixed(1)}%`;
+                    const verdict = document.createElement("div");
+                    verdict.className = `verdict risk-${riskLabel}`;
+                    verdict.textContent = `${riskLabel} risk: ${r.flagged ? "likely returned within 60 days" : "low 60-day return likelihood"}`;
+                    const bar = document.createElement("div");
+                    bar.className = `bar risk-${riskLabel}`;
+                    const fill = document.createElement("i");
+                    fill.style.width = Math.max(2, p * 100) + "%";
+                    const mark = document.createElement("b");
+                    mark.style.left = (thresh * 100) + "%";
+                    mark.title = "Decision threshold";
+                    bar.append(fill, mark);
+                    const hint = document.createElement("p");
+                    hint.className = "note";
+                    hint.textContent = `Threshold: ${(thresh * 100).toFixed(1)}% · Product history: ${r.known_product ? "known" : "new"} · Customer history: ${r.known_customer ? "known" : "new"}.`;
+                    resBox.append(pct, verdict, bar, hint);
+                }
+            } catch (err) {
+                const resBox = $("result");
+                if (resBox) { resBox.textContent = "Prediction failed: " + err.message; }
+            } finally {
+                if (btn) btn.disabled = false;
+            }
+        });
+    }
+}
+
 /* ---------- Start ---------- */
 async function init() {
     $("noUK").addEventListener("change", drawCountries);
+    setupCustomerDrawer();
+    setupThemeToggle();
+    setupDatasetSwitcher();
     try {
-        const [summary, charts, model, segs, anoms, modelComp] = await Promise.all([
+        const [summary, chartData, model, segs, anoms, modelComp, insights] = await Promise.all([
             getJSON("/api/summary"), getJSON("/api/charts"), getJSON("/api/model"),
-            getJSON("/api/segments"), getJSON("/api/anomalies"), getJSON("/api/model-comparison")]);
+            getJSON("/api/segments"), getJSON("/api/anomalies"), getJSON("/api/model-comparison"),
+            getJSON("/api/insights")]);
         renderSummary(summary);
-        renderCharts(charts);
+        renderInsightsStrip(insights);
+        renderCharts(chartData);
         renderModel(model);
         renderLineModel(model.line_model);
         renderSegments(segs);
@@ -518,12 +711,216 @@ async function init() {
         renderCleaning(model.cleaning);
         renderModelComparison(modelComp);
         setupPredictor(model.countries);
+        setupDualPredictor(model.countries);
         setupTable(model.countries);
         loadRecords();
         loadProducts();
+        setupUploadAnalyzer();
         updateView();
     } catch (err) {
         showError(`Could not load the dashboard: ${err.message}`);
+    }
+}
+
+function renderInsightsStrip(ins) {
+    const strip = $("insightsStrip");
+    if (!strip || !ins || !Array.isArray(ins.insights) || !ins.insights.length) return;
+    strip.replaceChildren();
+    ins.insights.forEach((text) => {
+        const div = document.createElement("div");
+        div.className = "insight-chip";
+        div.textContent = text;
+        strip.appendChild(div);
+    });
+    strip.hidden = false;
+}
+
+/* ---------- Feature 6: Seller / Business Dataset Upload & Report ---------- */
+function setupUploadAnalyzer() {
+    const dropZone = $("dropZone");
+    const fileInput = $("uploadFileInput");
+    const analyzeBtn = $("analyzeBtn");
+    const statusEl = $("uploadStatus");
+    const fileNameEl = $("uploadFileName");
+    if (!dropZone || !fileInput || !analyzeBtn) return;
+
+    let selectedFile = null;
+
+    function pickFile(file) {
+        if (!file) return;
+        selectedFile = file;
+        fileNameEl.textContent = `Selected: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        analyzeBtn.disabled = false;
+        statusEl.textContent = "";
+    }
+
+    dropZone.addEventListener("click", () => fileInput.click());
+    dropZone.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileInput.click(); }
+    });
+    fileInput.addEventListener("change", () => {
+        if (fileInput.files && fileInput.files[0]) pickFile(fileInput.files[0]);
+    });
+    dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+    });
+    dropZone.addEventListener("dragleave", () => dropZone.classList.remove("dragover"));
+    dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
+        if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+            pickFile(e.dataTransfer.files[0]);
+        }
+    });
+
+    analyzeBtn.addEventListener("click", async () => {
+        if (!selectedFile) return;
+        analyzeBtn.disabled = true;
+        statusEl.textContent = "";
+
+        const overlay = $("analyzingOverlay");
+        const fill = $("analyzeProgressFill");
+        const pctEl = $("analyzeProgressPct");
+        const stepLabel = $("analyzeStepLabel");
+        const stepItems = Array.from(document.querySelectorAll("#analyzeStepsList li"));
+        const stepMessages = [
+            { pct: 18, text: "Parsing CSV/Excel & normalizing columns..." },
+            { pct: 42, text: "Cleaning dates, quantities & flagging anomalies..." },
+            { pct: 65, text: "Aggregating invoice-level features..." },
+            { pct: 86, text: "Scoring cancellation risk with Random Forest..." },
+            { pct: 96, text: "Compiling charts & downloadable reports..." },
+        ];
+
+        function setStep(idx) {
+            const m = stepMessages[Math.min(idx, stepMessages.length - 1)];
+            if (fill) fill.style.width = `${m.pct}%`;
+            if (pctEl) pctEl.textContent = `${m.pct}%`;
+            if (stepLabel) stepLabel.textContent = m.text;
+            stepItems.forEach((li, i) => {
+                li.classList.toggle("done", i < idx);
+                li.classList.toggle("active", i === idx);
+            });
+        }
+
+        if (overlay) overlay.hidden = false;
+        let currentStep = 0;
+        setStep(0);
+        const stepTimer = setInterval(() => {
+            if (currentStep < stepMessages.length - 1) {
+                currentStep++;
+                setStep(currentStep);
+            }
+        }, 260);
+
+        const startedAt = Date.now();
+        try {
+            const fd = new FormData();
+            fd.append("file", selectedFile);
+            const res = await fetch("/api/analyze-upload", { method: "POST", body: fd });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok) {
+                throw new Error(data.detail || data.error || `Upload failed (${res.status})`);
+            }
+            const elapsed = Date.now() - startedAt;
+            if (elapsed < 1100) {
+                await new Promise((r) => setTimeout(r, 1100 - elapsed));
+            }
+            clearInterval(stepTimer);
+            stepItems.forEach((li) => { li.classList.remove("active"); li.classList.add("done"); });
+            if (fill) fill.style.width = "100%";
+            if (pctEl) pctEl.textContent = "100%";
+            if (stepLabel) stepLabel.textContent = "Analysis complete!";
+            await new Promise((r) => setTimeout(r, 250));
+
+            renderUploadReport(data);
+            statusEl.textContent = "Analysis complete! Download your reports below.";
+            statusEl.style.color = "var(--ok)";
+        } catch (err) {
+            clearInterval(stepTimer);
+            statusEl.textContent = err.message;
+            statusEl.style.color = "var(--warn)";
+        } finally {
+            if (overlay) overlay.hidden = true;
+            analyzeBtn.disabled = false;
+        }
+    });
+}
+
+function renderUploadReport(data) {
+    const resWrap = $("uploadResults");
+    resWrap.hidden = false;
+    resWrap.style.display = "grid";
+
+    const s = data.summary;
+    $("uploadReportTitle").textContent = `Report: ${data.filename}`;
+    $("uploadReportSub").textContent = `Report ID: ${data.report_id} · Decision threshold: ${(s.threshold * 100).toFixed(1)}%`;
+
+    $("dlInvoicesCsv").href = data.download_urls.invoices_csv;
+    $("dlFlaggedCsv").href = data.download_urls.flagged_csv;
+    $("dlSummaryTxt").href = data.download_urls.summary_txt;
+
+    $("u-rows").textContent = nf.format(s.total_rows);
+    $("u-invoices").textContent = nf.format(s.total_invoices);
+    $("u-highrisk").textContent = nf.format(s.high_risk_invoices);
+    $("u-medrisk").textContent = `${nf.format(s.medium_risk_invoices)} medium risk`;
+    $("u-flagged").textContent = nf.format(s.flagged_rows);
+    $("u-value").textContent = money.format(s.return_value);
+    $("u-net").textContent = `Net revenue: ${money.format(s.net_revenue)}`;
+
+    const prods = data.top_products || [];
+    barChart(
+        "uploadProductChart",
+        prods.map((p) => trunc(p.Description, 28)),
+        prods.map((p) => p.negative_lines),
+        "Negative/return lines",
+        { horizontal: true, fullLabels: prods.map((p) => p.Description) },
+    );
+
+    const ctrs = data.countries || [];
+    barChart(
+        "uploadCountryChart",
+        ctrs.map((c) => c.Country),
+        ctrs.map((c) => c.negative_lines),
+        "Negative/return lines",
+    );
+
+    const tbody = $("uploadInvoiceTable");
+    tbody.replaceChildren();
+    const rows = data.high_risk_invoices || [];
+    if (!rows.length) {
+        tbody.innerHTML = `<tr class="empty-row"><td colspan="9">No invoices found.</td></tr>`;
+        return;
+    }
+    rows.forEach((r) => {
+        const tr = tbody.insertRow();
+        tr.insertCell().textContent = r.InvoiceNo;
+        tr.insertCell().textContent = r.InvoiceDateStr;
+        tr.insertCell().textContent = r.country;
+        const tdLines = tr.insertCell(); tdLines.textContent = nf.format(r.line_count); tdLines.className = "num";
+        const tdQty = tr.insertCell(); tdQty.textContent = nf.format(r.total_abs_quantity); tdQty.className = "num";
+        const tdPrice = tr.insertCell(); tdPrice.textContent = `£${Number(r.average_unit_price).toFixed(2)}`; tdPrice.className = "num";
+        const tdProb = tr.insertCell(); tdProb.textContent = `${(Number(r.cancel_probability) * 100).toFixed(1)}%`; tdProb.className = "num";
+        const tdRisk = tr.insertCell();
+        tdRisk.innerHTML = `<span class="risk-badge risk-badge-${r.risk_level}">${r.risk_level}</span>`;
+        const tdVal = tr.insertCell(); tdVal.textContent = `£${Number(r.return_value).toFixed(2)}`; tdVal.className = "num";
+    });
+
+    // "Open Full Dashboard" button wires up dataset switcher
+    const switchBtn = $("switchToUploadBtn");
+    if (switchBtn) {
+        switchBtn.onclick = () => {
+            activeDatasetId = data.report_id;
+            const sel = $("datasetSelector");
+            if (sel) {
+                if (!sel.querySelector(`option[value="${data.report_id}"]`)) {
+                    sel.appendChild(new Option(`${data.filename} (uploaded)`, data.report_id));
+                }
+                sel.value = data.report_id;
+                sel.dispatchEvent(new Event("change"));
+            }
+            window.location.hash = "#overview";
+        };
     }
 }
 init();

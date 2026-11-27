@@ -258,3 +258,45 @@ def test_predict_return_risk_known_and_unknown():
     assert "probability_returned_within_60_days" in data_u
     assert 0.0 <= data_u["probability_returned_within_60_days"] <= 1.0
     assert data_u["known_product"] is False
+
+
+def test_cancel_risk_not_unknown():
+    res = client.get("/api/records?page=1&per_page=5")
+    assert res.status_code == 200
+    rows = res.json()["rows"]
+    assert len(rows) > 0
+    assert rows[0].get("cancel_risk") not in (None, "", "Unknown", "–")
+
+
+def test_api_datasets():
+    res = client.get("/api/datasets")
+    assert res.status_code == 200
+    data = res.json()
+    assert "datasets" in data
+    assert any(d["id"] == "default" for d in data["datasets"])
+
+
+def test_dataset_id_summary():
+    res_def = client.get("/api/summary")
+    res_q = client.get("/api/summary?dataset_id=default")
+    assert res_def.status_code == 200
+    assert res_q.status_code == 200
+    assert res_def.json().keys() == res_q.json().keys()
+
+
+def test_upload_and_switch_dataset():
+    csv_content = (
+        "InvoiceNo,StockCode,Description,Quantity,InvoiceDate,UnitPrice,CustomerID,Country\n"
+        "500001,85123A,WHITE HANGING HEART,6,2024-01-10 10:00:00,2.55,17850,United Kingdom\n"
+        "C500002,85123A,WHITE HANGING HEART,-2,2024-01-11 11:00:00,2.55,17850,United Kingdom\n"
+        "500003,22423,REGENCY CAKESTAND,1,2024-01-12 12:00:00,12.75,17851,France\n"
+    )
+    res = client.post(
+        "/api/analyze-upload",
+        files={"file": ("sample_test.csv", csv_content.encode("utf-8"), "text/csv")},
+    )
+    assert res.status_code == 200
+    report_id = res.json()["report_id"]
+    res_sum = client.get(f"/api/summary?dataset_id={report_id}")
+    assert res_sum.status_code == 200
+    assert res_sum.json()["total_invoices"] > 0

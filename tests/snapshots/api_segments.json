@@ -1,0 +1,9035 @@
+{
+  "k": 3,
+  "points": [
+    {
+      "CustomerID": "12572",
+      "pc1": 0.532,
+      "pc2": 0.412,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16644",
+      "pc1": -0.896,
+      "pc2": -0.198,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16063",
+      "pc1": -0.882,
+      "pc2": -0.8,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15313",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14484",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15703",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15766",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17870",
+      "pc1": -0.259,
+      "pc2": 1.625,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15994",
+      "pc1": -0.975,
+      "pc2": -0.678,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14762",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14386",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17538",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17862",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14377",
+      "pc1": -0.43,
+      "pc2": -0.812,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16610",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13947",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12809",
+      "pc1": 1.111,
+      "pc2": 0.14,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13745",
+      "pc1": 1.171,
+      "pc2": 0.132,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17874",
+      "pc1": 0.415,
+      "pc2": 0.569,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12364",
+      "pc1": -0.688,
+      "pc2": 0.262,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14518",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15407",
+      "pc1": -0.858,
+      "pc2": 0.486,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17114",
+      "pc1": 0.895,
+      "pc2": 1.158,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17035",
+      "pc1": 1.682,
+      "pc2": -0.068,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16083",
+      "pc1": -0.702,
+      "pc2": -0.453,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15791",
+      "pc1": 0.285,
+      "pc2": 0.544,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12532",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12535",
+      "pc1": -0.728,
+      "pc2": -0.42,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12566",
+      "pc1": 1.282,
+      "pc2": 0.02,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13466",
+      "pc1": 1.391,
+      "pc2": -0.026,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15156",
+      "pc1": -0.699,
+      "pc2": -0.044,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13638",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16711",
+      "pc1": -0.256,
+      "pc2": -0.044,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14381",
+      "pc1": -1.135,
+      "pc2": -0.467,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15952",
+      "pc1": -0.698,
+      "pc2": 0.276,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17085",
+      "pc1": -0.167,
+      "pc2": 1.053,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14286",
+      "pc1": 0.355,
+      "pc2": 1.429,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14561",
+      "pc1": -0.762,
+      "pc2": 0.039,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12410",
+      "pc1": 1.021,
+      "pc2": 0.064,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13188",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14850",
+      "pc1": 1.839,
+      "pc2": -0.118,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18205",
+      "pc1": -0.711,
+      "pc2": -0.442,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18145",
+      "pc1": -0.972,
+      "pc2": 0.637,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17236",
+      "pc1": -0.589,
+      "pc2": 0.616,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17668",
+      "pc1": -0.509,
+      "pc2": -0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14049",
+      "pc1": 0.184,
+      "pc2": 1.635,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13455",
+      "pc1": 1.913,
+      "pc2": 0.603,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14869",
+      "pc1": 0.31,
+      "pc2": 0.518,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16244",
+      "pc1": -1.005,
+      "pc2": -0.055,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14748",
+      "pc1": 0.405,
+      "pc2": 0.678,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18133",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12702",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17094",
+      "pc1": 1.865,
+      "pc2": -0.216,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16384",
+      "pc1": -0.72,
+      "pc2": -0.431,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14284",
+      "pc1": 0.894,
+      "pc2": 0.157,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15150",
+      "pc1": -0.365,
+      "pc2": 1.609,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14823",
+      "pc1": -0.766,
+      "pc2": 0.044,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16775",
+      "pc1": -0.44,
+      "pc2": 1.195,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12480",
+      "pc1": -0.861,
+      "pc2": 0.491,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13381",
+      "pc1": -0.195,
+      "pc2": 1.104,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15573",
+      "pc1": -1.02,
+      "pc2": -0.034,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15478",
+      "pc1": -0.799,
+      "pc2": -0.326,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15829",
+      "pc1": -0.841,
+      "pc2": -0.271,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16742",
+      "pc1": 13.49,
+      "pc2": -2.858,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "16171",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15185",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17454",
+      "pc1": -0.61,
+      "pc2": 0.159,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16520",
+      "pc1": -0.062,
+      "pc2": 0.856,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17259",
+      "pc1": -1.074,
+      "pc2": 0.037,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13978",
+      "pc1": -0.509,
+      "pc2": -0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18283",
+      "pc1": -0.701,
+      "pc2": 2.041,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12722",
+      "pc1": 1.45,
+      "pc2": 0.647,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14456",
+      "pc1": 0.081,
+      "pc2": 2.432,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13133",
+      "pc1": -0.323,
+      "pc2": -0.954,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16456",
+      "pc1": -0.679,
+      "pc2": 0.514,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15379",
+      "pc1": -0.119,
+      "pc2": 1.187,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15482",
+      "pc1": 3.968,
+      "pc2": 0.807,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12709",
+      "pc1": 2.42,
+      "pc2": 2.341,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16392",
+      "pc1": -1.059,
+      "pc2": -0.567,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14242",
+      "pc1": -0.525,
+      "pc2": -0.687,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13080",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12962",
+      "pc1": -0.525,
+      "pc2": -0.687,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15803",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12834",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16434",
+      "pc1": -0.529,
+      "pc2": 0.729,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17947",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18260",
+      "pc1": 0.533,
+      "pc2": 1.204,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14947",
+      "pc1": -0.491,
+      "pc2": -0.732,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18050",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15292",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15089",
+      "pc1": -0.679,
+      "pc2": 0.735,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14782",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13744",
+      "pc1": -0.9,
+      "pc2": -0.193,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15139",
+      "pc1": -0.472,
+      "pc2": -0.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12653",
+      "pc1": -0.793,
+      "pc2": -0.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17747",
+      "pc1": 4.824,
+      "pc2": -1.323,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13849",
+      "pc1": -1.035,
+      "pc2": -0.015,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15841",
+      "pc1": 1.0,
+      "pc2": 0.75,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14288",
+      "pc1": 1.414,
+      "pc2": -0.047,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14739",
+      "pc1": 0.143,
+      "pc2": 0.79,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13899",
+      "pc1": -0.57,
+      "pc2": -0.627,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12990",
+      "pc1": -0.323,
+      "pc2": -0.54,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13047",
+      "pc1": 1.867,
+      "pc2": 1.984,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15625",
+      "pc1": 1.552,
+      "pc2": 1.299,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13452",
+      "pc1": -0.086,
+      "pc2": -1.266,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12544",
+      "pc1": 1.465,
+      "pc2": -0.037,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13001",
+      "pc1": -0.067,
+      "pc2": 1.895,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14128",
+      "pc1": -0.812,
+      "pc2": -0.309,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16907",
+      "pc1": -0.747,
+      "pc2": 0.603,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15722",
+      "pc1": 0.356,
+      "pc2": 0.633,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13596",
+      "pc1": -1.141,
+      "pc2": 0.124,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13931",
+      "pc1": 0.38,
+      "pc2": 0.446,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16184",
+      "pc1": 0.255,
+      "pc2": 0.613,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14352",
+      "pc1": -0.539,
+      "pc2": 0.066,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17164",
+      "pc1": -0.148,
+      "pc2": 1.109,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12729",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17165",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18159",
+      "pc1": -0.882,
+      "pc2": -0.8,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13488",
+      "pc1": 0.26,
+      "pc2": 2.217,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15092",
+      "pc1": -0.654,
+      "pc2": -0.517,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15491",
+      "pc1": -0.162,
+      "pc2": 1.063,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13126",
+      "pc1": 0.315,
+      "pc2": 1.335,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18237",
+      "pc1": -0.517,
+      "pc2": 0.3,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16103",
+      "pc1": -0.379,
+      "pc2": 0.339,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15106",
+      "pc1": 0.485,
+      "pc2": 1.094,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14037",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18009",
+      "pc1": 1.033,
+      "pc2": 0.228,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18180",
+      "pc1": -0.624,
+      "pc2": 0.662,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15160",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13388",
+      "pc1": 0.918,
+      "pc2": 0.148,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12432",
+      "pc1": -0.766,
+      "pc2": 0.365,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17528",
+      "pc1": 0.496,
+      "pc2": 1.711,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12697",
+      "pc1": 1.179,
+      "pc2": 0.643,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14687",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13917",
+      "pc1": -0.556,
+      "pc2": -0.646,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16869",
+      "pc1": 0.027,
+      "pc2": 0.819,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16345",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15657",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13136",
+      "pc1": 1.816,
+      "pc2": 1.811,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15368",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13414",
+      "pc1": -0.476,
+      "pc2": -0.338,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15300",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16906",
+      "pc1": -0.705,
+      "pc2": 0.284,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14806",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16995",
+      "pc1": 13.693,
+      "pc2": -3.125,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "14888",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14891",
+      "pc1": -0.72,
+      "pc2": -0.431,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17738",
+      "pc1": 0.094,
+      "pc2": 0.732,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15212",
+      "pc1": 3.462,
+      "pc2": -0.779,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16875",
+      "pc1": 1.539,
+      "pc2": 1.448,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16029",
+      "pc1": 1.664,
+      "pc2": 2.57,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12515",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15809",
+      "pc1": 2.365,
+      "pc2": -0.043,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16912",
+      "pc1": 0.649,
+      "pc2": 1.489,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13495",
+      "pc1": 0.678,
+      "pc2": 0.472,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13962",
+      "pc1": -0.43,
+      "pc2": -0.812,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15923",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13720",
+      "pc1": -0.515,
+      "pc2": 0.034,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13070",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13758",
+      "pc1": -0.553,
+      "pc2": 0.761,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12423",
+      "pc1": -0.043,
+      "pc2": 1.088,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17620",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17251",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12890",
+      "pc1": -1.233,
+      "pc2": -0.337,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15364",
+      "pc1": -0.684,
+      "pc2": -0.477,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16212",
+      "pc1": 0.683,
+      "pc2": 0.28,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16567",
+      "pc1": -0.736,
+      "pc2": -0.409,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16079",
+      "pc1": -0.441,
+      "pc2": -0.384,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14383",
+      "pc1": -0.718,
+      "pc2": -0.018,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13160",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12463",
+      "pc1": 0.879,
+      "pc2": 0.918,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12733",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12526",
+      "pc1": -0.758,
+      "pc2": 0.034,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17914",
+      "pc1": -1.219,
+      "pc2": -0.356,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13850",
+      "pc1": 0.532,
+      "pc2": 0.677,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13227",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15725",
+      "pc1": -0.975,
+      "pc2": -0.678,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15681",
+      "pc1": 2.934,
+      "pc2": -0.09,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15144",
+      "pc1": -0.089,
+      "pc2": 1.757,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17220",
+      "pc1": -0.638,
+      "pc2": 1.777,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16026",
+      "pc1": -0.975,
+      "pc2": -0.678,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14054",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14498",
+      "pc1": -0.838,
+      "pc2": 0.723,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14929",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14673",
+      "pc1": -0.57,
+      "pc2": 0.369,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14233",
+      "pc1": 0.421,
+      "pc2": 0.361,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13514",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16732",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13536",
+      "pc1": -0.67,
+      "pc2": 0.915,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17857",
+      "pc1": 0.659,
+      "pc2": 1.532,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15749",
+      "pc1": 5.03,
+      "pc2": -1.177,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13489",
+      "pc1": -0.235,
+      "pc2": -0.335,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17621",
+      "pc1": 0.713,
+      "pc2": 0.148,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13748",
+      "pc1": -0.315,
+      "pc2": 0.033,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17791",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18242",
+      "pc1": -0.677,
+      "pc2": 0.249,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12534",
+      "pc1": -1.164,
+      "pc2": -0.429,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17268",
+      "pc1": -0.063,
+      "pc2": -0.561,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12640",
+      "pc1": -0.673,
+      "pc2": -0.079,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16113",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16642",
+      "pc1": 0.627,
+      "pc2": 0.231,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15540",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13035",
+      "pc1": 1.224,
+      "pc2": 0.044,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14852",
+      "pc1": -0.675,
+      "pc2": 0.73,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14669",
+      "pc1": -1.011,
+      "pc2": 0.367,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16829",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17329",
+      "pc1": -0.72,
+      "pc2": -0.431,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13239",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12723",
+      "pc1": -0.547,
+      "pc2": 0.339,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16010",
+      "pc1": -0.8,
+      "pc2": 0.089,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13229",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16718",
+      "pc1": -1.066,
+      "pc2": -0.558,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17374",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17351",
+      "pc1": -0.506,
+      "pc2": -0.298,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15120",
+      "pc1": 1.324,
+      "pc2": 0.042,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16247",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17463",
+      "pc1": -0.149,
+      "pc2": 1.087,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17517",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16389",
+      "pc1": 0.453,
+      "pc2": 0.344,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12497",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15599",
+      "pc1": -0.846,
+      "pc2": -0.264,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13615",
+      "pc1": 1.281,
+      "pc2": 0.077,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17967",
+      "pc1": -1.052,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18011",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17456",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15267",
+      "pc1": -0.104,
+      "pc2": -0.246,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16717",
+      "pc1": 2.021,
+      "pc2": 1.251,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13471",
+      "pc1": -1.012,
+      "pc2": 0.69,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14439",
+      "pc1": -0.975,
+      "pc2": -0.678,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13939",
+      "pc1": 0.427,
+      "pc2": 0.369,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16895",
+      "pc1": -1.164,
+      "pc2": -0.429,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14709",
+      "pc1": -0.149,
+      "pc2": 1.557,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13937",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16493",
+      "pc1": 1.184,
+      "pc2": 0.771,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15932",
+      "pc1": 0.697,
+      "pc2": 1.436,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14315",
+      "pc1": 0.116,
+      "pc2": 0.878,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15381",
+      "pc1": -0.354,
+      "pc2": -0.913,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12871",
+      "pc1": -0.43,
+      "pc2": -0.812,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15281",
+      "pc1": 0.972,
+      "pc2": 1.459,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14146",
+      "pc1": 1.979,
+      "pc2": 0.534,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17869",
+      "pc1": -0.406,
+      "pc2": 0.152,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14129",
+      "pc1": -0.475,
+      "pc2": 0.243,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13246",
+      "pc1": 0.068,
+      "pc2": 0.963,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14868",
+      "pc1": -0.04,
+      "pc2": 1.154,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17642",
+      "pc1": -0.773,
+      "pc2": -0.361,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17193",
+      "pc1": 1.093,
+      "pc2": 0.731,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16170",
+      "pc1": -0.054,
+      "pc2": 0.979,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12915",
+      "pc1": -0.609,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15088",
+      "pc1": 0.631,
+      "pc2": 0.391,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15671",
+      "pc1": 0.831,
+      "pc2": 1.275,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14527",
+      "pc1": -0.079,
+      "pc2": 3.21,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17731",
+      "pc1": 2.579,
+      "pc2": 0.005,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14306",
+      "pc1": 0.76,
+      "pc2": 0.206,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14935",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13411",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15181",
+      "pc1": 0.836,
+      "pc2": 0.007,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16523",
+      "pc1": 0.745,
+      "pc2": 2.475,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16955",
+      "pc1": 0.754,
+      "pc2": 0.181,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17480",
+      "pc1": 1.19,
+      "pc2": 0.188,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12431",
+      "pc1": 0.303,
+      "pc2": 1.931,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14664",
+      "pc1": -1.026,
+      "pc2": -0.027,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13792",
+      "pc1": -0.472,
+      "pc2": -0.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13299",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17893",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12681",
+      "pc1": 0.094,
+      "pc2": 2.573,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16841",
+      "pc1": 0.165,
+      "pc2": 0.884,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12556",
+      "pc1": -1.082,
+      "pc2": 0.047,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13523",
+      "pc1": 0.181,
+      "pc2": 0.938,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13276",
+      "pc1": -0.693,
+      "pc2": -0.465,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15840",
+      "pc1": 0.805,
+      "pc2": 0.12,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17560",
+      "pc1": -0.306,
+      "pc2": 0.021,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15694",
+      "pc1": 0.172,
+      "pc2": 1.217,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14651",
+      "pc1": -1.035,
+      "pc2": -0.015,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13166",
+      "pc1": 0.841,
+      "pc2": 0.359,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17932",
+      "pc1": -0.837,
+      "pc2": 0.138,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15349",
+      "pc1": -0.934,
+      "pc2": -0.148,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16438",
+      "pc1": -0.731,
+      "pc2": 0.581,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16379",
+      "pc1": 0.019,
+      "pc2": 0.777,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12710",
+      "pc1": 0.304,
+      "pc2": 0.548,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17457",
+      "pc1": -0.222,
+      "pc2": -0.089,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13419",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12536",
+      "pc1": 0.489,
+      "pc2": 1.008,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13167",
+      "pc1": -0.623,
+      "pc2": 0.177,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13008",
+      "pc1": 2.441,
+      "pc2": -0.395,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14595",
+      "pc1": -0.581,
+      "pc2": 0.606,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16669",
+      "pc1": -1.156,
+      "pc2": 0.144,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15815",
+      "pc1": -0.459,
+      "pc2": 0.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13763",
+      "pc1": 2.33,
+      "pc2": 0.359,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12355",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17377",
+      "pc1": -0.051,
+      "pc2": 2.039,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16510",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15904",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14277",
+      "pc1": 0.141,
+      "pc2": 0.899,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16311",
+      "pc1": -0.751,
+      "pc2": -0.389,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18196",
+      "pc1": -1.126,
+      "pc2": 0.106,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18075",
+      "pc1": 1.071,
+      "pc2": 1.657,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13982",
+      "pc1": 0.127,
+      "pc2": 0.772,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16031",
+      "pc1": -1.026,
+      "pc2": -0.027,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12908",
+      "pc1": 5.501,
+      "pc2": -1.66,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16011",
+      "pc1": -0.357,
+      "pc2": 1.587,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17972",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17337",
+      "pc1": 0.535,
+      "pc2": 1.881,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12947",
+      "pc1": 1.952,
+      "pc2": 1.455,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12895",
+      "pc1": 1.331,
+      "pc2": -0.058,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16754",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12578",
+      "pc1": 1.051,
+      "pc2": 1.051,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12866",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15437",
+      "pc1": -1.072,
+      "pc2": -0.55,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14250",
+      "pc1": -0.896,
+      "pc2": 0.216,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14116",
+      "pc1": -0.562,
+      "pc2": 0.359,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17468",
+      "pc1": -0.25,
+      "pc2": -1.05,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12719",
+      "pc1": 1.126,
+      "pc2": 0.138,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16221",
+      "pc1": -0.852,
+      "pc2": 0.158,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12639",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15993",
+      "pc1": 0.199,
+      "pc2": 1.994,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17047",
+      "pc1": -0.745,
+      "pc2": 0.017,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13933",
+      "pc1": -0.621,
+      "pc2": -0.56,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16791",
+      "pc1": -0.326,
+      "pc2": 1.384,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12607",
+      "pc1": 8.163,
+      "pc2": -1.207,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "15687",
+      "pc1": 0.161,
+      "pc2": 1.468,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12449",
+      "pc1": -0.924,
+      "pc2": 0.574,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16971",
+      "pc1": -1.045,
+      "pc2": -0.585,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16323",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13813",
+      "pc1": 0.275,
+      "pc2": 0.573,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14098",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14793",
+      "pc1": 1.665,
+      "pc2": -0.153,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13132",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17118",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14424",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15235",
+      "pc1": -0.377,
+      "pc2": 1.228,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17942",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14880",
+      "pc1": -0.65,
+      "pc2": -0.109,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17120",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17256",
+      "pc1": -0.525,
+      "pc2": -0.687,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17040",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13752",
+      "pc1": -0.497,
+      "pc2": 0.495,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15342",
+      "pc1": 1.436,
+      "pc2": 0.07,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14549",
+      "pc1": -1.135,
+      "pc2": -0.467,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16145",
+      "pc1": 1.197,
+      "pc2": 2.205,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12933",
+      "pc1": 0.028,
+      "pc2": 0.721,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16859",
+      "pc1": 4.663,
+      "pc2": 0.32,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17757",
+      "pc1": -0.293,
+      "pc2": 2.611,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12373",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16133",
+      "pc1": 1.3,
+      "pc2": 2.937,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12582",
+      "pc1": -0.584,
+      "pc2": -0.609,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17723",
+      "pc1": -0.024,
+      "pc2": -0.129,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13908",
+      "pc1": 0.106,
+      "pc2": 0.801,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18227",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17505",
+      "pc1": -0.846,
+      "pc2": -0.264,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12676",
+      "pc1": -0.326,
+      "pc2": 0.269,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16174",
+      "pc1": -0.465,
+      "pc2": -0.353,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12403",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15025",
+      "pc1": -1.186,
+      "pc2": -0.399,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14597",
+      "pc1": -0.818,
+      "pc2": -0.301,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14047",
+      "pc1": 1.024,
+      "pc2": 0.661,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18068",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17124",
+      "pc1": -0.966,
+      "pc2": -0.689,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12816",
+      "pc1": -0.665,
+      "pc2": -0.503,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17508",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12940",
+      "pc1": 1.153,
+      "pc2": 0.966,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12987",
+      "pc1": 0.956,
+      "pc2": 0.108,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16553",
+      "pc1": 0.423,
+      "pc2": 1.34,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17670",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14733",
+      "pc1": 0.647,
+      "pc2": 1.737,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12513",
+      "pc1": 1.116,
+      "pc2": 0.225,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14193",
+      "pc1": -0.786,
+      "pc2": -0.343,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15516",
+      "pc1": -0.357,
+      "pc2": -0.495,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14314",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13238",
+      "pc1": 0.561,
+      "pc2": 0.289,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14450",
+      "pc1": -0.612,
+      "pc2": -0.159,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17832",
+      "pc1": -1.159,
+      "pc2": -0.435,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13690",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14334",
+      "pc1": -0.152,
+      "pc2": 1.21,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16898",
+      "pc1": 0.524,
+      "pc2": 0.676,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13928",
+      "pc1": -0.393,
+      "pc2": -0.126,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15881",
+      "pc1": 2.111,
+      "pc2": 0.657,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13426",
+      "pc1": -0.026,
+      "pc2": 1.289,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15628",
+      "pc1": -0.106,
+      "pc2": 1.254,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14754",
+      "pc1": -0.78,
+      "pc2": -0.352,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15429",
+      "pc1": 0.632,
+      "pc2": 0.461,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12590",
+      "pc1": 0.704,
+      "pc2": 0.545,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14056",
+      "pc1": 0.213,
+      "pc2": 2.933,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12617",
+      "pc1": -1.045,
+      "pc2": -0.585,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17384",
+      "pc1": -0.509,
+      "pc2": -0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17614",
+      "pc1": -1.296,
+      "pc2": -0.255,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15032",
+      "pc1": 1.495,
+      "pc2": 0.632,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12586",
+      "pc1": 1.927,
+      "pc2": -0.283,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13316",
+      "pc1": -0.705,
+      "pc2": 0.284,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16115",
+      "pc1": -0.739,
+      "pc2": 1.176,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16927",
+      "pc1": -0.155,
+      "pc2": -0.761,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15104",
+      "pc1": 0.506,
+      "pc2": 0.457,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14682",
+      "pc1": -0.086,
+      "pc2": -1.266,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12728",
+      "pc1": -0.509,
+      "pc2": 0.026,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16042",
+      "pc1": 0.936,
+      "pc2": 0.885,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14130",
+      "pc1": -1.182,
+      "pc2": -0.405,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13566",
+      "pc1": -1.183,
+      "pc2": 0.18,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16601",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13886",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16891",
+      "pc1": -0.828,
+      "pc2": 0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15764",
+      "pc1": 0.94,
+      "pc2": 1.712,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17785",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17470",
+      "pc1": -0.584,
+      "pc2": 0.388,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14395",
+      "pc1": 0.204,
+      "pc2": 1.899,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18016",
+      "pc1": -0.708,
+      "pc2": 0.552,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12573",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13058",
+      "pc1": -0.214,
+      "pc2": -0.684,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14335",
+      "pc1": -0.887,
+      "pc2": -0.211,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15445",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13549",
+      "pc1": 0.208,
+      "pc2": 0.73,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14902",
+      "pc1": 2.096,
+      "pc2": -0.107,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12600",
+      "pc1": -0.201,
+      "pc2": 0.755,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17205",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14967",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15727",
+      "pc1": -0.819,
+      "pc2": 1.112,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18042",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15823",
+      "pc1": 13.086,
+      "pc2": -2.325,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "14075",
+      "pc1": -0.631,
+      "pc2": -0.133,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12950",
+      "pc1": -0.465,
+      "pc2": -0.353,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16909",
+      "pc1": 1.395,
+      "pc2": -0.015,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15353",
+      "pc1": -0.891,
+      "pc2": -0.205,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17728",
+      "pc1": -0.033,
+      "pc2": 0.873,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17797",
+      "pc1": -0.896,
+      "pc2": 0.216,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17325",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12938",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16376",
+      "pc1": 0.232,
+      "pc2": 0.709,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13837",
+      "pc1": -0.556,
+      "pc2": -0.646,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16639",
+      "pc1": 0.739,
+      "pc2": 0.314,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12386",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17345",
+      "pc1": -0.695,
+      "pc2": 0.271,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18045",
+      "pc1": -1.059,
+      "pc2": -0.567,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17897",
+      "pc1": 0.244,
+      "pc2": 0.659,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17389",
+      "pc1": 0.942,
+      "pc2": 2.599,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13130",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13562",
+      "pc1": -0.811,
+      "pc2": 0.103,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16368",
+      "pc1": -0.926,
+      "pc2": -0.159,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14542",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15194",
+      "pc1": 0.944,
+      "pc2": 2.385,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15567",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12822",
+      "pc1": 0.598,
+      "pc2": 0.317,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15002",
+      "pc1": -0.786,
+      "pc2": 0.392,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17649",
+      "pc1": 0.755,
+      "pc2": 0.449,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13091",
+      "pc1": 1.942,
+      "pc2": -0.082,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14317",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14495",
+      "pc1": -0.289,
+      "pc2": -0.999,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14452",
+      "pc1": -0.887,
+      "pc2": -0.211,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18177",
+      "pc1": 0.168,
+      "pc2": 0.761,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13066",
+      "pc1": 0.844,
+      "pc2": 0.251,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17765",
+      "pc1": -0.704,
+      "pc2": -0.038,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16796",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17029",
+      "pc1": -0.086,
+      "pc2": -1.266,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13343",
+      "pc1": 2.519,
+      "pc2": -0.288,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12656",
+      "pc1": 0.862,
+      "pc2": 1.365,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15938",
+      "pc1": -0.21,
+      "pc2": -0.106,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16172",
+      "pc1": -0.551,
+      "pc2": 0.344,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13505",
+      "pc1": 1.253,
+      "pc2": 1.717,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17720",
+      "pc1": -0.555,
+      "pc2": 0.088,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15919",
+      "pc1": -1.089,
+      "pc2": 0.056,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15034",
+      "pc1": 0.222,
+      "pc2": 1.91,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17433",
+      "pc1": -1.124,
+      "pc2": -0.481,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17799",
+      "pc1": -0.363,
+      "pc2": 1.658,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15480",
+      "pc1": -1.072,
+      "pc2": -0.55,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16594",
+      "pc1": -1.119,
+      "pc2": -0.488,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16949",
+      "pc1": 0.617,
+      "pc2": 0.571,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13787",
+      "pc1": -0.702,
+      "pc2": -0.453,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14092",
+      "pc1": 0.274,
+      "pc2": 1.885,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15814",
+      "pc1": 0.899,
+      "pc2": 0.868,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18256",
+      "pc1": 13.425,
+      "pc2": -2.773,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "12445",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14704",
+      "pc1": -0.893,
+      "pc2": 1.209,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12885",
+      "pc1": 0.227,
+      "pc2": 0.55,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16992",
+      "pc1": 0.088,
+      "pc2": 0.788,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12458",
+      "pc1": -0.744,
+      "pc2": -0.399,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12783",
+      "pc1": -0.677,
+      "pc2": 0.249,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15179",
+      "pc1": 0.508,
+      "pc2": 1.068,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15255",
+      "pc1": -1.084,
+      "pc2": -0.533,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14229",
+      "pc1": 1.466,
+      "pc2": 0.583,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16478",
+      "pc1": -0.388,
+      "pc2": -0.454,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14976",
+      "pc1": 0.242,
+      "pc2": 0.727,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16552",
+      "pc1": -0.541,
+      "pc2": -0.666,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13397",
+      "pc1": 0.329,
+      "pc2": 0.478,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17286",
+      "pc1": -1.066,
+      "pc2": -0.558,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13741",
+      "pc1": 0.454,
+      "pc2": 0.291,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12712",
+      "pc1": 1.031,
+      "pc2": 1.676,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17392",
+      "pc1": -0.862,
+      "pc2": -0.243,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16008",
+      "pc1": -0.56,
+      "pc2": -0.228,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15939",
+      "pc1": 0.162,
+      "pc2": 1.267,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13736",
+      "pc1": 0.062,
+      "pc2": 0.882,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17664",
+      "pc1": -0.793,
+      "pc2": -0.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16633",
+      "pc1": -0.164,
+      "pc2": 1.06,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14345",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14640",
+      "pc1": 0.812,
+      "pc2": 1.069,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13408",
+      "pc1": 0.8,
+      "pc2": 3.367,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14272",
+      "pc1": -0.72,
+      "pc2": -0.431,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13911",
+      "pc1": -0.51,
+      "pc2": 1.026,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16027",
+      "pc1": -0.117,
+      "pc2": -0.007,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14755",
+      "pc1": -0.178,
+      "pc2": 1.509,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17267",
+      "pc1": -0.751,
+      "pc2": -0.389,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16485",
+      "pc1": -1.052,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17144",
+      "pc1": -0.824,
+      "pc2": -0.294,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15488",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13404",
+      "pc1": -0.43,
+      "pc2": -0.812,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13991",
+      "pc1": 0.131,
+      "pc2": 0.809,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17701",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17588",
+      "pc1": -0.465,
+      "pc2": -0.353,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13831",
+      "pc1": -0.486,
+      "pc2": 0.481,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16106",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15579",
+      "pc1": -0.824,
+      "pc2": -0.294,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15834",
+      "pc1": 0.512,
+      "pc2": 1.345,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17737",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14502",
+      "pc1": 0.22,
+      "pc2": 2.107,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14423",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13695",
+      "pc1": -0.162,
+      "pc2": 1.243,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17119",
+      "pc1": 0.953,
+      "pc2": 0.18,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14089",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15553",
+      "pc1": -1.129,
+      "pc2": -0.474,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14457",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12753",
+      "pc1": 1.73,
+      "pc2": 1.792,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14890",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16705",
+      "pc1": 1.05,
+      "pc2": 2.557,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13189",
+      "pc1": -0.684,
+      "pc2": -0.477,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16399",
+      "pc1": -0.934,
+      "pc2": -0.148,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16629",
+      "pc1": -0.887,
+      "pc2": -0.211,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16887",
+      "pc1": -1.008,
+      "pc2": -0.634,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13900",
+      "pc1": -0.631,
+      "pc2": -0.133,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17228",
+      "pc1": -0.656,
+      "pc2": 1.066,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15812",
+      "pc1": -0.412,
+      "pc2": 0.161,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16374",
+      "pc1": -1.054,
+      "pc2": 0.01,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18034",
+      "pc1": -1.059,
+      "pc2": 0.017,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15436",
+      "pc1": -1.173,
+      "pc2": 0.581,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14015",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13845",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17716",
+      "pc1": 0.051,
+      "pc2": 1.472,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17715",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15318",
+      "pc1": -0.984,
+      "pc2": -0.666,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15296",
+      "pc1": 0.88,
+      "pc2": 1.741,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12361",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18048",
+      "pc1": -0.323,
+      "pc2": -0.954,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14083",
+      "pc1": -0.56,
+      "pc2": 1.091,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15299",
+      "pc1": 1.983,
+      "pc2": -0.17,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12794",
+      "pc1": -0.806,
+      "pc2": -0.317,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17829",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14885",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13110",
+      "pc1": -0.034,
+      "pc2": 1.075,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15421",
+      "pc1": -0.571,
+      "pc2": 0.109,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15374",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16052",
+      "pc1": -0.992,
+      "pc2": -0.655,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14499",
+      "pc1": -1.05,
+      "pc2": 0.419,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15526",
+      "pc1": -0.205,
+      "pc2": -1.11,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12981",
+      "pc1": -0.584,
+      "pc2": -0.609,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17579",
+      "pc1": 0.488,
+      "pc2": 0.393,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16781",
+      "pc1": 1.778,
+      "pc2": -0.105,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13782",
+      "pc1": -0.61,
+      "pc2": 0.643,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13118",
+      "pc1": 0.895,
+      "pc2": 0.916,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15523",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17206",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16214",
+      "pc1": -0.638,
+      "pc2": -0.125,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15639",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13002",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12841",
+      "pc1": 0.214,
+      "pc2": 2.176,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18173",
+      "pc1": -0.429,
+      "pc2": -0.079,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15669",
+      "pc1": 0.601,
+      "pc2": 0.314,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13311",
+      "pc1": -0.654,
+      "pc2": -0.517,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16767",
+      "pc1": -0.534,
+      "pc2": 1.319,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17062",
+      "pc1": 0.155,
+      "pc2": 0.61,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14357",
+      "pc1": -1.038,
+      "pc2": -0.594,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15701",
+      "pc1": -0.984,
+      "pc2": 0.652,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18204",
+      "pc1": -0.109,
+      "pc2": 0.934,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13369",
+      "pc1": 3.412,
+      "pc2": -0.533,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13715",
+      "pc1": 0.904,
+      "pc2": 1.307,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13296",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15057",
+      "pc1": -0.644,
+      "pc2": -0.531,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14326",
+      "pc1": 2.194,
+      "pc2": -0.422,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12897",
+      "pc1": -0.205,
+      "pc2": -1.11,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15584",
+      "pc1": -0.017,
+      "pc2": 0.828,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16253",
+      "pc1": -1.091,
+      "pc2": 0.059,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14068",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14944",
+      "pc1": 0.173,
+      "pc2": 1.594,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17554",
+      "pc1": -0.617,
+      "pc2": 0.432,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13732",
+      "pc1": -0.984,
+      "pc2": -0.666,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14258",
+      "pc1": -0.037,
+      "pc2": 1.138,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13327",
+      "pc1": -0.035,
+      "pc2": 1.064,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13338",
+      "pc1": 3.401,
+      "pc2": 0.157,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16065",
+      "pc1": -1.211,
+      "pc2": -0.367,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13298",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17303",
+      "pc1": -1.119,
+      "pc2": -0.488,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17372",
+      "pc1": -0.709,
+      "pc2": 1.136,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14592",
+      "pc1": -0.997,
+      "pc2": 0.349,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13645",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13422",
+      "pc1": 0.446,
+      "pc2": 0.792,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16637",
+      "pc1": 0.397,
+      "pc2": 0.562,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14224",
+      "pc1": -0.781,
+      "pc2": 0.385,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17752",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12750",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17400",
+      "pc1": -0.857,
+      "pc2": 0.747,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16709",
+      "pc1": -0.588,
+      "pc2": 0.393,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14111",
+      "pc1": 1.053,
+      "pc2": -0.077,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17553",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13348",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15335",
+      "pc1": -1.0,
+      "pc2": -0.644,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17858",
+      "pc1": -0.464,
+      "pc2": 1.343,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16157",
+      "pc1": 0.83,
+      "pc2": 0.032,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17783",
+      "pc1": -0.918,
+      "pc2": -0.17,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15706",
+      "pc1": 1.558,
+      "pc2": 0.981,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16275",
+      "pc1": -0.984,
+      "pc2": -0.666,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12384",
+      "pc1": 1.318,
+      "pc2": -0.0,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14701",
+      "pc1": 0.496,
+      "pc2": 1.821,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14607",
+      "pc1": 3.683,
+      "pc2": 0.712,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17580",
+      "pc1": -0.638,
+      "pc2": -0.125,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17405",
+      "pc1": 1.601,
+      "pc2": 0.787,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14672",
+      "pc1": -0.891,
+      "pc2": -0.205,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17044",
+      "pc1": 4.339,
+      "pc2": -0.237,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15026",
+      "pc1": -0.723,
+      "pc2": -0.012,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15942",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16750",
+      "pc1": -0.639,
+      "pc2": 0.46,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14082",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14765",
+      "pc1": -0.605,
+      "pc2": -0.168,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12626",
+      "pc1": 0.805,
+      "pc2": 1.894,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13726",
+      "pc1": -0.786,
+      "pc2": -0.343,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14766",
+      "pc1": 0.376,
+      "pc2": 1.233,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12864",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12560",
+      "pc1": 0.493,
+      "pc2": 0.606,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14667",
+      "pc1": -0.148,
+      "pc2": 2.464,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13329",
+      "pc1": 2.084,
+      "pc2": 0.269,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16422",
+      "pc1": 0.689,
+      "pc2": 3.054,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14897",
+      "pc1": -0.581,
+      "pc2": 0.122,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16660",
+      "pc1": 2.522,
+      "pc2": -0.459,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13391",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14088",
+      "pc1": -0.479,
+      "pc2": 1.967,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14459",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15222",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16872",
+      "pc1": -0.186,
+      "pc2": -0.721,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17233",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14350",
+      "pc1": 2.136,
+      "pc2": -0.169,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18142",
+      "pc1": 2.182,
+      "pc2": 0.259,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14616",
+      "pc1": -0.037,
+      "pc2": -0.917,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12401",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13868",
+      "pc1": -0.72,
+      "pc2": -0.431,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18251",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17348",
+      "pc1": -0.866,
+      "pc2": 0.76,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18033",
+      "pc1": -0.984,
+      "pc2": -0.666,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17730",
+      "pc1": 0.054,
+      "pc2": 1.737,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17892",
+      "pc1": -0.516,
+      "pc2": -0.285,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13817",
+      "pc1": -0.609,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13261",
+      "pc1": -0.382,
+      "pc2": -0.876,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12652",
+      "pc1": 1.013,
+      "pc2": 0.375,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17986",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15135",
+      "pc1": 2.068,
+      "pc2": -0.363,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13473",
+      "pc1": 0.849,
+      "pc2": 0.049,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16569",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13531",
+      "pc1": -0.609,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14247",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14698",
+      "pc1": -0.848,
+      "pc2": 0.736,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12743",
+      "pc1": -1.109,
+      "pc2": 0.083,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14714",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16037",
+      "pc1": -0.605,
+      "pc2": -0.168,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16419",
+      "pc1": 0.267,
+      "pc2": 0.635,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15609",
+      "pc1": 2.035,
+      "pc2": -0.196,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16415",
+      "pc1": -1.084,
+      "pc2": -0.533,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16245",
+      "pc1": 0.939,
+      "pc2": 0.937,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13159",
+      "pc1": 0.127,
+      "pc2": 0.772,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13512",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15663",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15740",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17749",
+      "pc1": -0.736,
+      "pc2": -0.409,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14165",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13859",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16440",
+      "pc1": -0.946,
+      "pc2": 0.866,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12468",
+      "pc1": 0.729,
+      "pc2": 0.235,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16147",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17502",
+      "pc1": -0.403,
+      "pc2": -0.114,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15776",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17277",
+      "pc1": -0.926,
+      "pc2": -0.159,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14684",
+      "pc1": -1.04,
+      "pc2": 0.989,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15598",
+      "pc1": 2.418,
+      "pc2": 0.32,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13212",
+      "pc1": -0.029,
+      "pc2": 0.818,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12988",
+      "pc1": -1.248,
+      "pc2": -0.318,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14964",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17629",
+      "pc1": -0.008,
+      "pc2": 1.091,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14489",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13930",
+      "pc1": -0.541,
+      "pc2": -0.666,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17611",
+      "pc1": 0.161,
+      "pc2": 2.373,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12995",
+      "pc1": 3.848,
+      "pc2": -0.909,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13259",
+      "pc1": -1.241,
+      "pc2": -0.327,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17690",
+      "pc1": -0.17,
+      "pc2": 1.735,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17674",
+      "pc1": -0.665,
+      "pc2": -0.503,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15010",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13139",
+      "pc1": -0.096,
+      "pc2": 1.153,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13722",
+      "pc1": 0.106,
+      "pc2": 0.636,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15397",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14740",
+      "pc1": 0.344,
+      "pc2": 0.601,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14525",
+      "pc1": 0.563,
+      "pc2": 1.947,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16858",
+      "pc1": 2.756,
+      "pc2": -0.439,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15130",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13807",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13354",
+      "pc1": -1.108,
+      "pc2": -0.503,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12565",
+      "pc1": 2.144,
+      "pc2": -0.386,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17031",
+      "pc1": -0.609,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12614",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14431",
+      "pc1": 2.493,
+      "pc2": -0.254,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14532",
+      "pc1": -0.623,
+      "pc2": 0.177,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14799",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13771",
+      "pc1": -0.067,
+      "pc2": 0.83,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13557",
+      "pc1": -0.728,
+      "pc2": -0.42,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13090",
+      "pc1": 0.775,
+      "pc2": 1.8,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14920",
+      "pc1": -0.872,
+      "pc2": -0.23,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14307",
+      "pc1": -0.74,
+      "pc2": 0.815,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14312",
+      "pc1": -0.538,
+      "pc2": 0.548,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17890",
+      "pc1": -1.005,
+      "pc2": -0.055,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15550",
+      "pc1": -0.61,
+      "pc2": 0.159,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14041",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16425",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15692",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15068",
+      "pc1": -1.043,
+      "pc2": -0.004,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14466",
+      "pc1": -0.422,
+      "pc2": 0.588,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16444",
+      "pc1": 0.112,
+      "pc2": 0.68,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13157",
+      "pc1": 0.152,
+      "pc2": 0.686,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13101",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14957",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13200",
+      "pc1": -0.533,
+      "pc2": 0.058,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17333",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12541",
+      "pc1": -0.667,
+      "pc2": -0.086,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13756",
+      "pc1": -0.003,
+      "pc2": 1.477,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15925",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15306",
+      "pc1": -0.714,
+      "pc2": -0.025,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17073",
+      "pc1": -0.902,
+      "pc2": 0.545,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15514",
+      "pc1": 2.334,
+      "pc2": 0.998,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12705",
+      "pc1": 0.823,
+      "pc2": 2.11,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17026",
+      "pc1": -0.205,
+      "pc2": -1.11,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12462",
+      "pc1": 2.009,
+      "pc2": 0.656,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16720",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12641",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13901",
+      "pc1": -0.765,
+      "pc2": 0.626,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15789",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16398",
+      "pc1": 1.246,
+      "pc2": 0.898,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15675",
+      "pc1": -0.441,
+      "pc2": -0.384,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13431",
+      "pc1": -0.812,
+      "pc2": -0.309,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14759",
+      "pc1": -0.872,
+      "pc2": 0.184,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13693",
+      "pc1": 13.644,
+      "pc2": -2.478,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "15215",
+      "pc1": 3.019,
+      "pc2": 0.551,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17152",
+      "pc1": 1.755,
+      "pc2": -0.257,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15607",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12943",
+      "pc1": 13.693,
+      "pc2": -3.125,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "17926",
+      "pc1": -0.597,
+      "pc2": -0.592,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13723",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18149",
+      "pc1": -0.373,
+      "pc2": -0.474,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13716",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16782",
+      "pc1": 0.966,
+      "pc2": 2.082,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12380",
+      "pc1": -0.006,
+      "pc2": 0.763,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16180",
+      "pc1": 0.563,
+      "pc2": 1.353,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14841",
+      "pc1": -0.665,
+      "pc2": 0.717,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16804",
+      "pc1": -0.723,
+      "pc2": -0.012,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13833",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12569",
+      "pc1": 0.187,
+      "pc2": 2.108,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16108",
+      "pc1": 0.903,
+      "pc2": 0.381,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18141",
+      "pc1": 13.693,
+      "pc2": -3.125,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "16765",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18154",
+      "pc1": -0.597,
+      "pc2": -0.592,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13503",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16587",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18229",
+      "pc1": -0.195,
+      "pc2": 1.678,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15525",
+      "pc1": 0.03,
+      "pc2": 0.831,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12435",
+      "pc1": -0.744,
+      "pc2": -0.399,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12917",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14167",
+      "pc1": -0.555,
+      "pc2": 0.088,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17960",
+      "pc1": -0.916,
+      "pc2": -0.755,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16818",
+      "pc1": 0.136,
+      "pc2": 1.592,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15801",
+      "pc1": 0.619,
+      "pc2": 0.448,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12381",
+      "pc1": 0.44,
+      "pc2": 0.551,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17076",
+      "pc1": -0.486,
+      "pc2": -0.324,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15918",
+      "pc1": -0.773,
+      "pc2": -0.361,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16446",
+      "pc1": 7.337,
+      "pc2": -2.233,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "12412",
+      "pc1": -0.714,
+      "pc2": -0.025,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12853",
+      "pc1": 1.231,
+      "pc2": 1.166,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16723",
+      "pc1": -0.786,
+      "pc2": -0.343,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12904",
+      "pc1": -0.934,
+      "pc2": -0.148,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14801",
+      "pc1": -1.14,
+      "pc2": -0.46,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16078",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16790",
+      "pc1": 0.495,
+      "pc2": 1.099,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13083",
+      "pc1": -0.556,
+      "pc2": -0.646,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14603",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17501",
+      "pc1": -0.556,
+      "pc2": -0.646,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15199",
+      "pc1": -0.218,
+      "pc2": -0.357,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12377",
+      "pc1": -0.954,
+      "pc2": -0.122,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14690",
+      "pc1": 0.929,
+      "pc2": 0.273,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14396",
+      "pc1": -0.942,
+      "pc2": -0.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12611",
+      "pc1": -1.177,
+      "pc2": -0.411,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12923",
+      "pc1": -0.927,
+      "pc2": -0.741,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15983",
+      "pc1": -0.779,
+      "pc2": 0.382,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13425",
+      "pc1": -0.796,
+      "pc2": 0.084,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15744",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17317",
+      "pc1": 2.294,
+      "pc2": 0.065,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16092",
+      "pc1": 1.143,
+      "pc2": 0.722,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13516",
+      "pc1": -0.638,
+      "pc2": -0.125,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15862",
+      "pc1": -0.856,
+      "pc2": 0.484,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18122",
+      "pc1": -0.934,
+      "pc2": 1.07,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12736",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15365",
+      "pc1": 2.872,
+      "pc2": 0.307,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16395",
+      "pc1": -0.857,
+      "pc2": 0.747,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13210",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18192",
+      "pc1": -1.072,
+      "pc2": -0.55,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16393",
+      "pc1": 1.259,
+      "pc2": 2.315,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14524",
+      "pc1": -0.59,
+      "pc2": 1.13,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13798",
+      "pc1": 1.641,
+      "pc2": 2.813,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17708",
+      "pc1": -0.728,
+      "pc2": -0.42,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14241",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13032",
+      "pc1": 0.571,
+      "pc2": 0.474,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15165",
+      "pc1": -0.927,
+      "pc2": -0.741,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12500",
+      "pc1": 0.715,
+      "pc2": 1.114,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14708",
+      "pc1": 0.653,
+      "pc2": 0.184,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16112",
+      "pc1": -0.265,
+      "pc2": -0.295,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12402",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12701",
+      "pc1": -0.841,
+      "pc2": -0.271,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14059",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17235",
+      "pc1": -0.684,
+      "pc2": -0.477,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15394",
+      "pc1": -0.701,
+      "pc2": 0.28,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14150",
+      "pc1": -0.654,
+      "pc2": -0.517,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12787",
+      "pc1": -0.388,
+      "pc2": -0.454,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17977",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17338",
+      "pc1": -0.284,
+      "pc2": 1.978,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16653",
+      "pc1": 0.919,
+      "pc2": 0.391,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15612",
+      "pc1": -0.289,
+      "pc2": -0.999,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14342",
+      "pc1": 1.736,
+      "pc2": 0.343,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14873",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13995",
+      "pc1": 0.053,
+      "pc2": 0.769,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13043",
+      "pc1": 1.821,
+      "pc2": -0.217,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15386",
+      "pc1": -0.966,
+      "pc2": -0.689,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16337",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13524",
+      "pc1": -0.306,
+      "pc2": 0.021,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18287",
+      "pc1": -0.766,
+      "pc2": 0.044,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16756",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12658",
+      "pc1": -1.0,
+      "pc2": -0.644,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13866",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13728",
+      "pc1": -0.45,
+      "pc2": 0.433,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15097",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18183",
+      "pc1": 2.783,
+      "pc2": 1.014,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13196",
+      "pc1": -0.774,
+      "pc2": 0.375,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14261",
+      "pc1": -0.846,
+      "pc2": -0.264,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15346",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14387",
+      "pc1": -0.96,
+      "pc2": 0.3,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16340",
+      "pc1": -1.401,
+      "pc2": -0.116,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15630",
+      "pc1": 0.365,
+      "pc2": 0.459,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16240",
+      "pc1": 1.324,
+      "pc2": 1.424,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12703",
+      "pc1": 1.308,
+      "pc2": 0.036,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14962",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17375",
+      "pc1": 0.586,
+      "pc2": 0.442,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14688",
+      "pc1": 1.378,
+      "pc2": 2.26,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14705",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16268",
+      "pc1": -0.799,
+      "pc2": -0.326,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16261",
+      "pc1": -0.796,
+      "pc2": 0.405,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18249",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15577",
+      "pc1": -0.605,
+      "pc2": -0.168,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12667",
+      "pc1": -0.975,
+      "pc2": -0.678,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17788",
+      "pc1": -0.205,
+      "pc2": -1.11,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17828",
+      "pc1": 2.525,
+      "pc2": 1.1,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14772",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15440",
+      "pc1": -0.732,
+      "pc2": -0.0,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13314",
+      "pc1": 2.198,
+      "pc2": 0.026,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12417",
+      "pc1": 0.572,
+      "pc2": 1.624,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17551",
+      "pc1": -1.031,
+      "pc2": -0.603,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14649",
+      "pc1": -0.923,
+      "pc2": 0.572,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14448",
+      "pc1": -0.584,
+      "pc2": -0.609,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18119",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13243",
+      "pc1": -1.14,
+      "pc2": -0.46,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13925",
+      "pc1": 1.589,
+      "pc2": 0.556,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12598",
+      "pc1": -0.075,
+      "pc2": 1.052,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14530",
+      "pc1": -0.788,
+      "pc2": 0.878,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13762",
+      "pc1": 8.893,
+      "pc2": -2.183,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "17302",
+      "pc1": 0.183,
+      "pc2": 0.716,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13421",
+      "pc1": 0.162,
+      "pc2": 0.665,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14585",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15171",
+      "pc1": 3.821,
+      "pc2": -0.891,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13245",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14870",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17656",
+      "pc1": -0.598,
+      "pc2": 0.406,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15539",
+      "pc1": -1.045,
+      "pc2": -0.585,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14975",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12488",
+      "pc1": -0.694,
+      "pc2": -0.051,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15291",
+      "pc1": 1.065,
+      "pc2": 1.79,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15197",
+      "pc1": 3.39,
+      "pc2": -0.039,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16062",
+      "pc1": -0.623,
+      "pc2": 0.177,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18104",
+      "pc1": -1.024,
+      "pc2": -0.613,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12359",
+      "pc1": 0.379,
+      "pc2": 1.372,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16777",
+      "pc1": -0.824,
+      "pc2": -0.294,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16727",
+      "pc1": -1.066,
+      "pc2": -0.558,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12738",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13417",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15980",
+      "pc1": -0.631,
+      "pc2": -0.133,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16963",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14102",
+      "pc1": 1.439,
+      "pc2": 1.027,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17293",
+      "pc1": -0.479,
+      "pc2": 0.984,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13318",
+      "pc1": -0.429,
+      "pc2": -0.4,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13791",
+      "pc1": 4.224,
+      "pc2": -0.898,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17006",
+      "pc1": -0.521,
+      "pc2": 0.042,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16513",
+      "pc1": -0.46,
+      "pc2": -0.037,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15219",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14039",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18185",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17232",
+      "pc1": -0.736,
+      "pc2": -0.409,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17007",
+      "pc1": 0.257,
+      "pc2": 0.648,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14401",
+      "pc1": -0.123,
+      "pc2": 1.528,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16169",
+      "pc1": -0.701,
+      "pc2": 0.28,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13929",
+      "pc1": 1.54,
+      "pc2": -0.329,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16262",
+      "pc1": 13.49,
+      "pc2": -2.858,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "15857",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15838",
+      "pc1": 0.021,
+      "pc2": 1.739,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16401",
+      "pc1": 1.184,
+      "pc2": 2.161,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15872",
+      "pc1": -1.054,
+      "pc2": 0.01,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13258",
+      "pc1": -0.583,
+      "pc2": -0.197,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17714",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17418",
+      "pc1": -0.693,
+      "pc2": -0.465,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17761",
+      "pc1": -0.829,
+      "pc2": -0.87,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15265",
+      "pc1": -0.975,
+      "pc2": -0.094,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14539",
+      "pc1": -0.711,
+      "pc2": -0.442,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17855",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17659",
+      "pc1": 0.258,
+      "pc2": 1.553,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17341",
+      "pc1": -0.995,
+      "pc2": 0.346,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16370",
+      "pc1": -0.972,
+      "pc2": 0.637,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12873",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14723",
+      "pc1": -0.842,
+      "pc2": 0.95,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17616",
+      "pc1": -0.037,
+      "pc2": -0.917,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12624",
+      "pc1": -0.744,
+      "pc2": -0.399,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16515",
+      "pc1": -0.682,
+      "pc2": 0.517,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14626",
+      "pc1": 0.924,
+      "pc2": 1.364,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18248",
+      "pc1": 1.279,
+      "pc2": 0.729,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18156",
+      "pc1": -1.089,
+      "pc2": 0.056,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15184",
+      "pc1": -0.896,
+      "pc2": -0.198,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16125",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14099",
+      "pc1": -0.225,
+      "pc2": 1.54,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15370",
+      "pc1": 0.04,
+      "pc2": 0.936,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13224",
+      "pc1": 0.149,
+      "pc2": 0.685,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16406",
+      "pc1": -1.145,
+      "pc2": -0.454,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15041",
+      "pc1": -1.182,
+      "pc2": -0.405,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15837",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14388",
+      "pc1": 0.266,
+      "pc2": 1.439,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18102",
+      "pc1": 0.024,
+      "pc2": 2.924,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14046",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16287",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17991",
+      "pc1": -0.25,
+      "pc2": -1.05,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12577",
+      "pc1": 0.41,
+      "pc2": 0.689,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13634",
+      "pc1": -0.828,
+      "pc2": 0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14428",
+      "pc1": 0.456,
+      "pc2": 1.198,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12974",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13761",
+      "pc1": -0.93,
+      "pc2": -0.153,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16271",
+      "pc1": -0.077,
+      "pc2": 0.856,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17350",
+      "pc1": 0.223,
+      "pc2": 0.597,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16571",
+      "pc1": 2.043,
+      "pc2": 0.711,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12520",
+      "pc1": 0.025,
+      "pc2": 0.935,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18146",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15782",
+      "pc1": 0.382,
+      "pc2": 0.372,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14551",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12670",
+      "pc1": 0.094,
+      "pc2": 0.769,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13657",
+      "pc1": -0.525,
+      "pc2": -0.687,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16505",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17429",
+      "pc1": 0.767,
+      "pc2": 0.266,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12425",
+      "pc1": -1.008,
+      "pc2": -0.634,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13946",
+      "pc1": -0.284,
+      "pc2": -0.591,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15955",
+      "pc1": 0.135,
+      "pc2": 1.704,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16634",
+      "pc1": -0.382,
+      "pc2": -0.876,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14176",
+      "pc1": 0.446,
+      "pc2": 0.325,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17214",
+      "pc1": 0.356,
+      "pc2": 0.787,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16558",
+      "pc1": 0.308,
+      "pc2": 2.395,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14022",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16776",
+      "pc1": -1.203,
+      "pc2": -0.377,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14304",
+      "pc1": 5.408,
+      "pc2": -0.994,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14184",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14013",
+      "pc1": -0.568,
+      "pc2": -0.217,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14636",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18120",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17078",
+      "pc1": -0.665,
+      "pc2": -0.503,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17354",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12474",
+      "pc1": 1.523,
+      "pc2": 2.789,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15419",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17786",
+      "pc1": -0.922,
+      "pc2": -0.164,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18006",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16353",
+      "pc1": 0.001,
+      "pc2": 1.611,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13004",
+      "pc1": 0.239,
+      "pc2": 2.321,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16256",
+      "pc1": 1.522,
+      "pc2": -0.124,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13675",
+      "pc1": -0.644,
+      "pc2": -0.531,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13499",
+      "pc1": 0.983,
+      "pc2": 0.748,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15668",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14210",
+      "pc1": -0.032,
+      "pc2": 0.911,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14205",
+      "pc1": 5.1,
+      "pc2": -0.951,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17777",
+      "pc1": -1.05,
+      "pc2": 0.419,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12686",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17030",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15109",
+      "pc1": 1.548,
+      "pc2": 0.095,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17231",
+      "pc1": 0.284,
+      "pc2": 2.218,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17255",
+      "pc1": -0.946,
+      "pc2": -0.132,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18067",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12792",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16810",
+      "pc1": 1.844,
+      "pc2": -0.195,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12713",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13936",
+      "pc1": 1.213,
+      "pc2": 0.128,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14270",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16851",
+      "pc1": -0.429,
+      "pc2": -0.4,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14005",
+      "pc1": -0.605,
+      "pc2": 0.415,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14703",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13350",
+      "pc1": 1.175,
+      "pc2": 0.129,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17406",
+      "pc1": 1.248,
+      "pc2": 0.894,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13718",
+      "pc1": -0.452,
+      "pc2": -0.783,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12872",
+      "pc1": -0.914,
+      "pc2": -0.175,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12785",
+      "pc1": 1.512,
+      "pc2": -0.121,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14910",
+      "pc1": 2.371,
+      "pc2": 0.636,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14400",
+      "pc1": 1.16,
+      "pc2": 0.135,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14536",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13952",
+      "pc1": 0.065,
+      "pc2": 0.778,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14232",
+      "pc1": 0.755,
+      "pc2": 1.379,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13990",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14364",
+      "pc1": -0.355,
+      "pc2": 0.669,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16809",
+      "pc1": -0.153,
+      "pc2": 0.983,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17174",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13558",
+      "pc1": -0.895,
+      "pc2": 0.536,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14346",
+      "pc1": -0.887,
+      "pc2": -0.211,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15416",
+      "pc1": -0.213,
+      "pc2": 1.009,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14353",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17088",
+      "pc1": -0.786,
+      "pc2": 0.392,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16952",
+      "pc1": -0.525,
+      "pc2": -0.687,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17899",
+      "pc1": -0.966,
+      "pc2": -0.689,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15903",
+      "pc1": 0.067,
+      "pc2": 0.866,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16352",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12479",
+      "pc1": 2.598,
+      "pc2": 0.456,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13563",
+      "pc1": -0.83,
+      "pc2": -0.286,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15775",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14534",
+      "pc1": 1.238,
+      "pc2": 2.478,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13846",
+      "pc1": 0.541,
+      "pc2": 0.413,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12420",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12438",
+      "pc1": -1.02,
+      "pc2": -0.034,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17732",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12812",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17244",
+      "pc1": -0.966,
+      "pc2": -0.689,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13384",
+      "pc1": 0.275,
+      "pc2": 1.336,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14050",
+      "pc1": -0.857,
+      "pc2": -0.25,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17957",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17499",
+      "pc1": -1.038,
+      "pc2": -0.594,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17027",
+      "pc1": 0.108,
+      "pc2": 0.974,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16863",
+      "pc1": 1.691,
+      "pc2": 0.469,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15189",
+      "pc1": 1.429,
+      "pc2": 2.797,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14507",
+      "pc1": 0.091,
+      "pc2": 0.862,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16126",
+      "pc1": -0.791,
+      "pc2": 0.398,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13561",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12502",
+      "pc1": -0.751,
+      "pc2": 0.608,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13914",
+      "pc1": 0.677,
+      "pc2": 0.208,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16101",
+      "pc1": 1.803,
+      "pc2": 0.933,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15957",
+      "pc1": -1.052,
+      "pc2": -0.576,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15944",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14467",
+      "pc1": -0.714,
+      "pc2": 0.297,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12913",
+      "pc1": -0.464,
+      "pc2": 0.23,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16183",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17082",
+      "pc1": -0.972,
+      "pc2": -0.098,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17956",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15721",
+      "pc1": -1.251,
+      "pc2": -0.313,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12740",
+      "pc1": -0.927,
+      "pc2": -0.741,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15522",
+      "pc1": -0.867,
+      "pc2": -0.236,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13889",
+      "pc1": -0.764,
+      "pc2": -0.956,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15987",
+      "pc1": -0.578,
+      "pc2": 0.794,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14937",
+      "pc1": 0.451,
+      "pc2": 0.292,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15473",
+      "pc1": 3.096,
+      "pc2": 0.276,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13700",
+      "pc1": -0.54,
+      "pc2": 1.201,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15998",
+      "pc1": -0.506,
+      "pc2": 1.442,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13948",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16447",
+      "pc1": -0.992,
+      "pc2": -0.655,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15958",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12353",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13590",
+      "pc1": 0.086,
+      "pc2": 0.841,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12909",
+      "pc1": 1.074,
+      "pc2": 1.238,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16823",
+      "pc1": -1.024,
+      "pc2": -0.613,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16919",
+      "pc1": -0.643,
+      "pc2": 1.463,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17758",
+      "pc1": -0.845,
+      "pc2": 1.315,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14788",
+      "pc1": -0.693,
+      "pc2": -0.465,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14643",
+      "pc1": 1.11,
+      "pc2": 0.106,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14159",
+      "pc1": -0.224,
+      "pc2": 2.432,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16842",
+      "pc1": 0.213,
+      "pc2": 0.523,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12588",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17274",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16656",
+      "pc1": 1.391,
+      "pc2": 1.783,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15458",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17289",
+      "pc1": 0.068,
+      "pc2": 0.703,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14290",
+      "pc1": 0.033,
+      "pc2": 0.827,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14273",
+      "pc1": -0.412,
+      "pc2": -0.102,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15689",
+      "pc1": -0.382,
+      "pc2": -0.876,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12619",
+      "pc1": 0.854,
+      "pc2": 1.308,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17746",
+      "pc1": 3.108,
+      "pc2": -0.657,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13097",
+      "pc1": 0.478,
+      "pc2": 2.109,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16746",
+      "pc1": -0.294,
+      "pc2": 2.065,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14676",
+      "pc1": 0.769,
+      "pc2": 0.827,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12876",
+      "pc1": -0.979,
+      "pc2": -0.089,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14390",
+      "pc1": 0.528,
+      "pc2": 1.957,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12659",
+      "pc1": -0.424,
+      "pc2": -1.404,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12708",
+      "pc1": 1.617,
+      "pc2": 1.859,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14198",
+      "pc1": 1.901,
+      "pc2": 0.823,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17191",
+      "pc1": -0.75,
+      "pc2": 1.02,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17360",
+      "pc1": -0.93,
+      "pc2": 0.261,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15466",
+      "pc1": -1.14,
+      "pc2": -0.46,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17171",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13284",
+      "pc1": 1.515,
+      "pc2": -0.122,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14699",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15645",
+      "pc1": -1.108,
+      "pc2": -0.503,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17306",
+      "pc1": 0.591,
+      "pc2": 1.519,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12922",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15096",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15174",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13631",
+      "pc1": 0.987,
+      "pc2": 0.5,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13985",
+      "pc1": -0.259,
+      "pc2": 1.853,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13209",
+      "pc1": 0.354,
+      "pc2": 1.821,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16792",
+      "pc1": -0.452,
+      "pc2": -0.783,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14001",
+      "pc1": -0.605,
+      "pc2": -0.168,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12867",
+      "pc1": 0.23,
+      "pc2": 1.986,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15304",
+      "pc1": 1.34,
+      "pc2": 0.648,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14523",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15021",
+      "pc1": 0.44,
+      "pc2": 2.11,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18110",
+      "pc1": 1.881,
+      "pc2": 0.05,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16706",
+      "pc1": -0.925,
+      "pc2": 0.254,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16041",
+      "pc1": -0.155,
+      "pc2": -0.761,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17929",
+      "pc1": 1.636,
+      "pc2": -0.327,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12891",
+      "pc1": -0.037,
+      "pc2": -0.917,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15363",
+      "pc1": 1.386,
+      "pc2": -0.038,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13949",
+      "pc1": -0.707,
+      "pc2": 0.771,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15289",
+      "pc1": 0.253,
+      "pc2": 0.488,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14803",
+      "pc1": -0.638,
+      "pc2": -0.125,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18202",
+      "pc1": -0.758,
+      "pc2": 0.034,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12473",
+      "pc1": 0.164,
+      "pc2": 0.824,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17070",
+      "pc1": -1.164,
+      "pc2": -0.429,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15870",
+      "pc1": -1.215,
+      "pc2": -0.362,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15504",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15187",
+      "pc1": 0.467,
+      "pc2": 1.463,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15753",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14501",
+      "pc1": 2.86,
+      "pc2": -0.661,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14154",
+      "pc1": -0.846,
+      "pc2": -0.264,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16602",
+      "pc1": 1.617,
+      "pc2": 0.08,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15843",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17636",
+      "pc1": 2.159,
+      "pc2": -0.127,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14903",
+      "pc1": 1.01,
+      "pc2": 2.102,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13777",
+      "pc1": 1.128,
+      "pc2": 2.475,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14497",
+      "pc1": 1.325,
+      "pc2": 0.146,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13434",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14913",
+      "pc1": -0.708,
+      "pc2": 0.289,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15565",
+      "pc1": -0.354,
+      "pc2": -0.913,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13430",
+      "pc1": 1.535,
+      "pc2": 0.69,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16928",
+      "pc1": 0.26,
+      "pc2": 1.812,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15060",
+      "pc1": -0.784,
+      "pc2": 0.389,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15448",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17432",
+      "pc1": -0.824,
+      "pc2": -0.294,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17481",
+      "pc1": 0.077,
+      "pc2": 0.684,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15175",
+      "pc1": -0.882,
+      "pc2": -0.8,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14465",
+      "pc1": -0.925,
+      "pc2": 0.254,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13497",
+      "pc1": 1.224,
+      "pc2": -0.09,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15974",
+      "pc1": -0.195,
+      "pc2": 1.179,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15606",
+      "pc1": 1.999,
+      "pc2": 0.809,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13069",
+      "pc1": 1.353,
+      "pc2": 2.081,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13974",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14441",
+      "pc1": 2.82,
+      "pc2": 1.346,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16045",
+      "pc1": -0.695,
+      "pc2": 0.271,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17131",
+      "pc1": -0.735,
+      "pc2": 0.587,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17419",
+      "pc1": 0.091,
+      "pc2": 1.67,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13332",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14044",
+      "pc1": -0.952,
+      "pc2": 0.611,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13500",
+      "pc1": 0.398,
+      "pc2": 0.485,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13339",
+      "pc1": -1.124,
+      "pc2": -0.481,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17095",
+      "pc1": 0.848,
+      "pc2": 0.906,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15263",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17883",
+      "pc1": -0.846,
+      "pc2": 0.471,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15402",
+      "pc1": -0.78,
+      "pc2": -0.352,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13309",
+      "pc1": -0.672,
+      "pc2": 0.503,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15163",
+      "pc1": -0.684,
+      "pc2": -0.477,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15508",
+      "pc1": -0.553,
+      "pc2": 0.568,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14578",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14264",
+      "pc1": 1.399,
+      "pc2": -0.127,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13841",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16681",
+      "pc1": -0.356,
+      "pc2": 0.309,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12775",
+      "pc1": 0.27,
+      "pc2": 0.612,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16473",
+      "pc1": 0.756,
+      "pc2": 0.055,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17864",
+      "pc1": -0.837,
+      "pc2": 0.138,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13103",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17547",
+      "pc1": 13.574,
+      "pc2": -2.969,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "16076",
+      "pc1": 0.101,
+      "pc2": 1.203,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15098",
+      "pc1": 2.263,
+      "pc2": -0.615,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15201",
+      "pc1": 4.24,
+      "pc2": 1.072,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14565",
+      "pc1": 0.468,
+      "pc2": 1.144,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12571",
+      "pc1": -0.728,
+      "pc2": -0.42,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17921",
+      "pc1": -0.846,
+      "pc2": 0.471,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17836",
+      "pc1": -0.882,
+      "pc2": -0.8,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14828",
+      "pc1": -0.388,
+      "pc2": -0.454,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14513",
+      "pc1": 2.616,
+      "pc2": -0.381,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13138",
+      "pc1": -0.45,
+      "pc2": 0.433,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13992",
+      "pc1": -0.477,
+      "pc2": -1.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12375",
+      "pc1": 0.998,
+      "pc2": -0.069,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13213",
+      "pc1": 0.069,
+      "pc2": 0.785,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15773",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15450",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12564",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17173",
+      "pc1": 0.04,
+      "pc2": 0.982,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12752",
+      "pc1": -1.119,
+      "pc2": -0.488,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12766",
+      "pc1": -0.824,
+      "pc2": 1.118,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17158",
+      "pc1": -0.754,
+      "pc2": 0.028,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13811",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12963",
+      "pc1": -0.44,
+      "pc2": 0.781,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13307",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15785",
+      "pc1": 1.004,
+      "pc2": 1.23,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13655",
+      "pc1": -0.867,
+      "pc2": -0.236,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13971",
+      "pc1": 0.794,
+      "pc2": 1.496,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14158",
+      "pc1": -1.045,
+      "pc2": -0.585,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17105",
+      "pc1": -1.002,
+      "pc2": -0.059,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17571",
+      "pc1": -1.03,
+      "pc2": 0.713,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14226",
+      "pc1": 0.977,
+      "pc2": 0.882,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16226",
+      "pc1": -0.214,
+      "pc2": -0.684,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14223",
+      "pc1": 0.296,
+      "pc2": 0.484,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15978",
+      "pc1": -1.096,
+      "pc2": -0.518,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14847",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16081",
+      "pc1": -0.879,
+      "pc2": 0.777,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18155",
+      "pc1": 1.283,
+      "pc2": 0.019,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17679",
+      "pc1": -0.693,
+      "pc2": -0.465,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15638",
+      "pc1": 13.574,
+      "pc2": -2.969,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "17774",
+      "pc1": -0.113,
+      "pc2": 0.914,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16400",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18094",
+      "pc1": -0.414,
+      "pc2": 0.578,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12429",
+      "pc1": -0.729,
+      "pc2": 0.317,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15432",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12618",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16770",
+      "pc1": 0.021,
+      "pc2": 0.911,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14248",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18151",
+      "pc1": -0.759,
+      "pc2": -0.379,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12453",
+      "pc1": -1.059,
+      "pc2": -0.567,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15022",
+      "pc1": -0.8,
+      "pc2": 0.411,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15705",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16814",
+      "pc1": -0.174,
+      "pc2": 2.05,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15691",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15193",
+      "pc1": -0.829,
+      "pc2": -0.87,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18001",
+      "pc1": -0.872,
+      "pc2": -0.23,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16350",
+      "pc1": 0.439,
+      "pc2": 0.503,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17601",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16764",
+      "pc1": 0.336,
+      "pc2": 2.495,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17427",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12845",
+      "pc1": -0.393,
+      "pc2": -0.126,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14237",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16403",
+      "pc1": 3.398,
+      "pc2": -0.546,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15344",
+      "pc1": 2.704,
+      "pc2": 0.187,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15211",
+      "pc1": -0.846,
+      "pc2": -0.264,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15513",
+      "pc1": 0.264,
+      "pc2": 2.135,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13821",
+      "pc1": -0.882,
+      "pc2": -0.217,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15518",
+      "pc1": 0.682,
+      "pc2": 1.82,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15341",
+      "pc1": -0.798,
+      "pc2": -0.911,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13658",
+      "pc1": 0.912,
+      "pc2": 0.996,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12691",
+      "pc1": -0.306,
+      "pc2": 0.021,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15118",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16464",
+      "pc1": -1.105,
+      "pc2": 0.491,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15949",
+      "pc1": -0.57,
+      "pc2": -0.627,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17624",
+      "pc1": -0.835,
+      "pc2": -0.278,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13148",
+      "pc1": 1.368,
+      "pc2": 1.987,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18239",
+      "pc1": -0.617,
+      "pc2": 0.432,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17291",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16674",
+      "pc1": -1.011,
+      "pc2": -0.046,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12882",
+      "pc1": -0.472,
+      "pc2": -0.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17061",
+      "pc1": 0.186,
+      "pc2": 1.17,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14385",
+      "pc1": -0.341,
+      "pc2": -0.517,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16315",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13467",
+      "pc1": -1.026,
+      "pc2": -0.027,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12994",
+      "pc1": 1.949,
+      "pc2": 0.628,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15810",
+      "pc1": 2.812,
+      "pc2": 0.84,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14355",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13064",
+      "pc1": -0.639,
+      "pc2": 0.199,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13075",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14711",
+      "pc1": -0.292,
+      "pc2": 1.65,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15360",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12615",
+      "pc1": -0.75,
+      "pc2": 0.344,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15427",
+      "pc1": -1.174,
+      "pc2": 0.582,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13877",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12604",
+      "pc1": -0.509,
+      "pc2": -0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15619",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16680",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14895",
+      "pc1": 0.212,
+      "pc2": 2.436,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17706",
+      "pc1": 0.66,
+      "pc2": 2.3,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15537",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13614",
+      "pc1": -0.936,
+      "pc2": 0.59,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14141",
+      "pc1": 1.578,
+      "pc2": 0.588,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13038",
+      "pc1": -0.516,
+      "pc2": -0.285,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17415",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16471",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14810",
+      "pc1": -0.573,
+      "pc2": 1.371,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14537",
+      "pc1": -0.654,
+      "pc2": -1.1,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15950",
+      "pc1": 0.388,
+      "pc2": 0.665,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13185",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18092",
+      "pc1": 0.055,
+      "pc2": 1.175,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17339",
+      "pc1": -0.382,
+      "pc2": -0.876,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12346",
+      "pc1": 9.314,
+      "pc2": -2.721,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "14470",
+      "pc1": -0.793,
+      "pc2": -0.334,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18176",
+      "pc1": 1.567,
+      "pc2": 0.103,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18167",
+      "pc1": 1.542,
+      "pc2": 0.581,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14474",
+      "pc1": 1.051,
+      "pc2": 0.205,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14119",
+      "pc1": 13.693,
+      "pc2": -3.125,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "12648",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17912",
+      "pc1": 0.712,
+      "pc2": 0.373,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15054",
+      "pc1": -1.069,
+      "pc2": 0.03,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14298",
+      "pc1": -0.33,
+      "pc2": 3.178,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17134",
+      "pc1": -0.621,
+      "pc2": -0.56,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17381",
+      "pc1": 0.223,
+      "pc2": 1.925,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16828",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15279",
+      "pc1": 1.651,
+      "pc2": -0.044,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14426",
+      "pc1": 2.201,
+      "pc2": 1.834,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16625",
+      "pc1": -0.882,
+      "pc2": -0.8,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15506",
+      "pc1": -1.002,
+      "pc2": 0.356,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16202",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15769",
+      "pc1": 1.371,
+      "pc2": 1.83,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18004",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18136",
+      "pc1": 0.534,
+      "pc2": 0.293,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12685",
+      "pc1": -0.69,
+      "pc2": 0.75,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13621",
+      "pc1": -0.829,
+      "pc2": -0.87,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15827",
+      "pc1": 2.048,
+      "pc2": 1.717,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16811",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14997",
+      "pc1": 0.603,
+      "pc2": 0.182,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16595",
+      "pc1": -1.255,
+      "pc2": -0.309,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16339",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16659",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17941",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14918",
+      "pc1": -0.806,
+      "pc2": -0.317,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17128",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12540",
+      "pc1": -0.116,
+      "pc2": 2.145,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15303",
+      "pc1": -0.966,
+      "pc2": -0.689,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13668",
+      "pc1": 0.964,
+      "pc2": 2.66,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15406",
+      "pc1": 2.189,
+      "pc2": 0.517,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14289",
+      "pc1": -0.373,
+      "pc2": 0.332,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14349",
+      "pc1": -0.966,
+      "pc2": -0.689,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17309",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16122",
+      "pc1": -0.482,
+      "pc2": -0.009,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14412",
+      "pc1": 0.648,
+      "pc2": 0.302,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15051",
+      "pc1": -0.966,
+      "pc2": 0.309,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14700",
+      "pc1": -0.899,
+      "pc2": 0.219,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15103",
+      "pc1": -0.736,
+      "pc2": -0.409,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16325",
+      "pc1": 2.225,
+      "pc2": 0.172,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17545",
+      "pc1": -0.964,
+      "pc2": 0.306,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13269",
+      "pc1": 0.0,
+      "pc2": 1.935,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16333",
+      "pc1": 0.143,
+      "pc2": 1.362,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13192",
+      "pc1": -0.9,
+      "pc2": -0.193,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14696",
+      "pc1": 0.32,
+      "pc2": 1.281,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13587",
+      "pc1": 5.825,
+      "pc2": -0.749,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14379",
+      "pc1": -0.812,
+      "pc2": -0.309,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15243",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16163",
+      "pc1": 4.036,
+      "pc2": -1.16,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12647",
+      "pc1": 0.329,
+      "pc2": 1.236,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15251",
+      "pc1": 1.108,
+      "pc2": 1.607,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13576",
+      "pc1": 0.35,
+      "pc2": 1.704,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14434",
+      "pc1": -0.058,
+      "pc2": -0.084,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13941",
+      "pc1": 0.97,
+      "pc2": 0.749,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17802",
+      "pc1": 0.285,
+      "pc2": 0.752,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13228",
+      "pc1": -0.275,
+      "pc2": -1.6,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15182",
+      "pc1": -0.684,
+      "pc2": -0.477,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14511",
+      "pc1": 0.434,
+      "pc2": 0.612,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15678",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14185",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16198",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15434",
+      "pc1": 0.667,
+      "pc2": 0.504,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13198",
+      "pc1": 0.148,
+      "pc2": 1.448,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13055",
+      "pc1": 0.254,
+      "pc2": 0.57,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14825",
+      "pc1": -0.33,
+      "pc2": 1.166,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15148",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16178",
+      "pc1": -0.596,
+      "pc2": -1.178,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12662",
+      "pc1": -0.155,
+      "pc2": 1.484,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15463",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15417",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13583",
+      "pc1": -1.119,
+      "pc2": -0.488,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13147",
+      "pc1": 0.002,
+      "pc2": -0.647,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13721",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16085",
+      "pc1": -0.797,
+      "pc2": 0.669,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13893",
+      "pc1": -0.857,
+      "pc2": -0.834,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12616",
+      "pc1": 2.519,
+      "pc2": 0.699,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17301",
+      "pc1": -1.149,
+      "pc2": -0.447,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12971",
+      "pc1": 0.483,
+      "pc2": 3.14,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16013",
+      "pc1": 1.39,
+      "pc2": 2.367,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15016",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12660",
+      "pc1": -0.703,
+      "pc2": -1.036,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16904",
+      "pc1": -0.707,
+      "pc2": 1.961,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12833",
+      "pc1": -0.894,
+      "pc2": -0.784,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13477",
+      "pc1": 0.523,
+      "pc2": 1.05,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18097",
+      "pc1": -0.048,
+      "pc2": 0.926,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14978",
+      "pc1": -0.868,
+      "pc2": 0.762,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15581",
+      "pc1": -0.456,
+      "pc2": 1.091,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16866",
+      "pc1": -0.284,
+      "pc2": -0.591,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17613",
+      "pc1": 0.262,
+      "pc2": 1.994,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18215",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14009",
+      "pc1": 0.674,
+      "pc2": 0.289,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18274",
+      "pc1": 8.763,
+      "pc2": -2.023,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "16455",
+      "pc1": -0.508,
+      "pc2": 0.701,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17548",
+      "pc1": 10.73,
+      "pc2": -1.932,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "17940",
+      "pc1": 0.015,
+      "pc2": 0.334,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16574",
+      "pc1": -0.937,
+      "pc2": -0.727,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13819",
+      "pc1": -0.583,
+      "pc2": -0.197,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18069",
+      "pc1": -0.046,
+      "pc2": 1.678,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15649",
+      "pc1": -0.086,
+      "pc2": -1.266,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14127",
+      "pc1": -0.638,
+      "pc2": -0.125,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14487",
+      "pc1": -0.093,
+      "pc2": 1.015,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13003",
+      "pc1": -0.155,
+      "pc2": -0.761,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12354",
+      "pc1": -1.145,
+      "pc2": -0.454,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17166",
+      "pc1": 1.887,
+      "pc2": -0.334,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15554",
+      "pc1": -0.745,
+      "pc2": -0.981,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15768",
+      "pc1": -0.506,
+      "pc2": -0.298,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15636",
+      "pc1": -0.644,
+      "pc2": -0.531,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17279",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17742",
+      "pc1": -0.509,
+      "pc2": -0.709,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12824",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16744",
+      "pc1": -0.75,
+      "pc2": 1.02,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13240",
+      "pc1": -0.631,
+      "pc2": 0.188,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17824",
+      "pc1": -0.725,
+      "pc2": -1.008,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16494",
+      "pc1": -1.102,
+      "pc2": -0.51,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13707",
+      "pc1": -0.824,
+      "pc2": -0.294,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14887",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18087",
+      "pc1": 7.216,
+      "pc2": -1.001,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "16679",
+      "pc1": -0.359,
+      "pc2": -1.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12427",
+      "pc1": 2.394,
+      "pc2": 0.249,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15747",
+      "pc1": -0.837,
+      "pc2": 0.138,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17189",
+      "pc1": -0.887,
+      "pc2": -0.211,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17975",
+      "pc1": -0.173,
+      "pc2": 1.673,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17954",
+      "pc1": 0.27,
+      "pc2": 2.225,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13242",
+      "pc1": -0.323,
+      "pc2": -0.54,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15408",
+      "pc1": -0.992,
+      "pc2": -0.655,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14562",
+      "pc1": 0.715,
+      "pc2": 2.213,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13376",
+      "pc1": -0.673,
+      "pc2": -0.079,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17253",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13168",
+      "pc1": -0.012,
+      "pc2": 0.835,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14867",
+      "pc1": 0.477,
+      "pc2": 0.298,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14753",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16914",
+      "pc1": -0.957,
+      "pc2": -0.702,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18189",
+      "pc1": 0.322,
+      "pc2": 0.507,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15728",
+      "pc1": 13.425,
+      "pc2": -2.773,
+      "segment": "Heavy returners"
+    },
+    {
+      "CustomerID": "13518",
+      "pc1": -1.008,
+      "pc2": -0.634,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13814",
+      "pc1": 0.413,
+      "pc2": 0.431,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12829",
+      "pc1": 1.838,
+      "pc2": -0.389,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16305",
+      "pc1": -0.87,
+      "pc2": -0.816,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16825",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14829",
+      "pc1": 1.382,
+      "pc2": 0.608,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18193",
+      "pc1": 2.826,
+      "pc2": 0.215,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12383",
+      "pc1": 0.021,
+      "pc2": 0.803,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16426",
+      "pc1": -0.708,
+      "pc2": 1.423,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16628",
+      "pc1": -0.027,
+      "pc2": 0.884,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16880",
+      "pc1": -0.664,
+      "pc2": 0.907,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13145",
+      "pc1": 1.448,
+      "pc2": -0.256,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13093",
+      "pc1": 1.175,
+      "pc2": 1.819,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17673",
+      "pc1": -0.264,
+      "pc2": 1.192,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12769",
+      "pc1": -0.975,
+      "pc2": -0.678,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15438",
+      "pc1": -0.905,
+      "pc2": -0.769,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15720",
+      "pc1": -1.373,
+      "pc2": -0.153,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18272",
+      "pc1": -0.079,
+      "pc2": 1.073,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17140",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17515",
+      "pc1": -0.708,
+      "pc2": 0.289,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16276",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14359",
+      "pc1": 1.497,
+      "pc2": 1.029,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14834",
+      "pc1": 0.689,
+      "pc2": 0.969,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14543",
+      "pc1": 3.335,
+      "pc2": 1.233,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13874",
+      "pc1": -0.814,
+      "pc2": -0.89,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15724",
+      "pc1": 1.299,
+      "pc2": -0.221,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16721",
+      "pc1": -1.016,
+      "pc2": -0.623,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13470",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17817",
+      "pc1": -0.56,
+      "pc2": -0.228,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14477",
+      "pc1": 1.029,
+      "pc2": -0.07,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13639",
+      "pc1": -1.038,
+      "pc2": -0.594,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13033",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12567",
+      "pc1": -0.085,
+      "pc2": 1.623,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12881",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18055",
+      "pc1": -0.334,
+      "pc2": 1.618,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "17491",
+      "pc1": -0.002,
+      "pc2": 1.185,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15547",
+      "pc1": -0.751,
+      "pc2": 1.927,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14209",
+      "pc1": 0.023,
+      "pc2": 0.851,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "13095",
+      "pc1": -0.522,
+      "pc2": -1.274,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15988",
+      "pc1": -0.916,
+      "pc2": -0.755,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12700",
+      "pc1": -1.023,
+      "pc2": 0.704,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18014",
+      "pc1": -0.947,
+      "pc2": -0.714,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "18056",
+      "pc1": -0.829,
+      "pc2": -0.87,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16498",
+      "pc1": 1.692,
+      "pc2": -0.285,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15214",
+      "pc1": -0.48,
+      "pc2": 0.833,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16931",
+      "pc1": -0.639,
+      "pc2": 2.329,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15656",
+      "pc1": -0.539,
+      "pc2": 0.066,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14931",
+      "pc1": -0.482,
+      "pc2": -0.009,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16448",
+      "pc1": -0.829,
+      "pc2": -0.87,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15935",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17677",
+      "pc1": 1.2,
+      "pc2": 2.906,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15319",
+      "pc1": -0.781,
+      "pc2": -0.933,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12830",
+      "pc1": -0.319,
+      "pc2": 0.26,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17245",
+      "pc1": -0.626,
+      "pc2": -1.137,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12815",
+      "pc1": -0.806,
+      "pc2": -0.317,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15392",
+      "pc1": 0.108,
+      "pc2": 0.681,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "15297",
+      "pc1": 0.571,
+      "pc2": 0.308,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "18018",
+      "pc1": -0.684,
+      "pc2": -0.477,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13832",
+      "pc1": 3.794,
+      "pc2": -1.021,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "16728",
+      "pc1": -1.022,
+      "pc2": 0.703,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16671",
+      "pc1": -0.155,
+      "pc2": -0.761,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17923",
+      "pc1": -0.157,
+      "pc2": -1.757,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16959",
+      "pc1": -0.561,
+      "pc2": -1.223,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12522",
+      "pc1": -0.407,
+      "pc2": -0.843,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17671",
+      "pc1": 2.222,
+      "pc2": 0.462,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12982",
+      "pc1": 1.953,
+      "pc2": 0.038,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14449",
+      "pc1": -1.007,
+      "pc2": 0.684,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "12592",
+      "pc1": -0.525,
+      "pc2": -0.687,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "15366",
+      "pc1": -0.799,
+      "pc2": -0.326,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13926",
+      "pc1": -0.68,
+      "pc2": -1.067,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "13999",
+      "pc1": 0.354,
+      "pc2": 1.798,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "14951",
+      "pc1": -0.843,
+      "pc2": -0.852,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14265",
+      "pc1": -0.702,
+      "pc2": -0.453,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "16989",
+      "pc1": -0.058,
+      "pc2": -0.084,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "14570",
+      "pc1": -0.675,
+      "pc2": -0.49,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17017",
+      "pc1": 0.985,
+      "pc2": 2.377,
+      "segment": "Frequent buyers"
+    },
+    {
+      "CustomerID": "12589",
+      "pc1": -0.72,
+      "pc2": -0.431,
+      "segment": "Bulk buyers"
+    },
+    {
+      "CustomerID": "17438",
+      "pc1": 1.644,
+      "pc2": -0.063,
+      "segment": "Frequent buyers"
+    }
+  ],
+  "silhouette": 0.393,
+  "summary": [
+    {
+      "customers": 51,
+      "median_basket": 2.5,
+      "median_invoices": 2.0,
+      "return_line_rate": 0.7662,
+      "returned_value": 260184.23,
+      "segment": "Heavy returners",
+      "share_of_returned_value": 0.5515
+    },
+    {
+      "customers": 1550,
+      "median_basket": 13.1082,
+      "median_invoices": 6.0,
+      "return_line_rate": 0.0571,
+      "returned_value": 211566.48,
+      "segment": "Frequent buyers",
+      "share_of_returned_value": 0.4485
+    },
+    {
+      "customers": 2762,
+      "median_basket": 16.1667,
+      "median_invoices": 2.0,
+      "return_line_rate": 0.0,
+      "returned_value": 0.0,
+      "segment": "Bulk buyers",
+      "share_of_returned_value": 0.0
+    }
+  ]
+}

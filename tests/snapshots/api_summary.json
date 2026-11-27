@@ -1,0 +1,12 @@
+{
+  "cancellation_rate": 0.1481,
+  "cancellations": 3836,
+  "flagged_records": 11763,
+  "negative_records": 10587,
+  "period": {
+    "end": "09 Dec 2011",
+    "start": "01 Dec 2010"
+  },
+  "return_value": 893979.73,
+  "total_invoices": 25900
+}

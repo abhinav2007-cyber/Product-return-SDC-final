@@ -1,0 +1,8 @@
+{
+  "flagged": false,
+  "label": "Probably not a cancellation",
+  "prediction": 0,
+  "probability": 0.1533,
+  "risk": "Low",
+  "threshold": 0.7227
+}

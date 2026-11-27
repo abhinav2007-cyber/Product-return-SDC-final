@@ -1,0 +1,172 @@
+{
+  "page": 1,
+  "pages": 292,
+  "rows": [
+    {
+      "CustomerID": "14911",
+      "negative_records": 226,
+      "pc1": 0.964,
+      "pc2": 5.163,
+      "return_rate": 0.0383,
+      "segment": "Frequent buyers",
+      "total_invoices": 248,
+      "total_lines": 5898,
+      "total_spending": 132458.73
+    },
+    {
+      "CustomerID": "17841",
+      "negative_records": 136,
+      "pc1": 0.644,
+      "pc2": 5.187,
+      "return_rate": 0.0174,
+      "segment": "Frequent buyers",
+      "total_invoices": 169,
+      "total_lines": 7812,
+      "total_spending": 39869.05
+    },
+    {
+      "CustomerID": "17511",
+      "negative_records": 113,
+      "pc1": 1.333,
+      "pc2": 3.287,
+      "return_rate": 0.105,
+      "segment": "Frequent buyers",
+      "total_invoices": 46,
+      "total_lines": 1076,
+      "total_spending": 88125.38
+    },
+    {
+      "CustomerID": "15311",
+      "negative_records": 112,
+      "pc1": 0.897,
+      "pc2": 4.359,
+      "return_rate": 0.0452,
+      "segment": "Frequent buyers",
+      "total_invoices": 118,
+      "total_lines": 2478,
+      "total_spending": 59284.19
+    },
+    {
+      "CustomerID": "12607",
+      "negative_records": 101,
+      "pc1": 8.163,
+      "pc2": -1.207,
+      "return_rate": 0.5,
+      "segment": "Heavy returners",
+      "total_invoices": 2,
+      "total_lines": 202,
+      "total_spending": 3.552713678800501e-15
+    },
+    {
+      "CustomerID": "14410",
+      "negative_records": 92,
+      "pc1": 4.949,
+      "pc2": 1.091,
+      "return_rate": 0.3262,
+      "segment": "Frequent buyers",
+      "total_invoices": 15,
+      "total_lines": 282,
+      "total_spending": 573.45
+    },
+    {
+      "CustomerID": "13798",
+      "negative_records": 89,
+      "pc1": 1.641,
+      "pc2": 2.813,
+      "return_rate": 0.2032,
+      "segment": "Frequent buyers",
+      "total_invoices": 63,
+      "total_lines": 438,
+      "total_spending": 36352.87
+    },
+    {
+      "CustomerID": "14606",
+      "negative_records": 82,
+      "pc1": 1.02,
+      "pc2": 4.521,
+      "return_rate": 0.0297,
+      "segment": "Frequent buyers",
+      "total_invoices": 128,
+      "total_lines": 2759,
+      "total_spending": 11633.35
+    },
+    {
+      "CustomerID": "13113",
+      "negative_records": 79,
+      "pc1": 3.441,
+      "pc2": 2.399,
+      "return_rate": 0.2821,
+      "segment": "Frequent buyers",
+      "total_invoices": 40,
+      "total_lines": 280,
+      "total_spending": 10510.0
+    },
+    {
+      "CustomerID": "12471",
+      "negative_records": 71,
+      "pc1": 2.148,
+      "pc2": 3.057,
+      "return_rate": 0.134,
+      "segment": "Frequent buyers",
+      "total_invoices": 49,
+      "total_lines": 530,
+      "total_spending": 18705.52
+    },
+    {
+      "CustomerID": "14680",
+      "negative_records": 62,
+      "pc1": 2.046,
+      "pc2": 2.125,
+      "return_rate": 0.1938,
+      "segment": "Frequent buyers",
+      "total_invoices": 23,
+      "total_lines": 320,
+      "total_spending": 26932.34
+    },
+    {
+      "CustomerID": "12415",
+      "negative_records": 62,
+      "pc1": 0.452,
+      "pc2": 2.517,
+      "return_rate": 0.0797,
+      "segment": "Frequent buyers",
+      "total_invoices": 26,
+      "total_lines": 778,
+      "total_spending": 123725.45
+    },
+    {
+      "CustomerID": "12472",
+      "negative_records": 52,
+      "pc1": 1.818,
+      "pc2": 2.069,
+      "return_rate": 0.133,
+      "segment": "Frequent buyers",
+      "total_invoices": 13,
+      "total_lines": 391,
+      "total_spending": 6229.48
+    },
+    {
+      "CustomerID": "12709",
+      "negative_records": 49,
+      "pc1": 2.42,
+      "pc2": 2.341,
+      "return_rate": 0.1914,
+      "segment": "Frequent buyers",
+      "total_invoices": 26,
+      "total_lines": 256,
+      "total_spending": 9264.1
+    },
+    {
+      "CustomerID": "12748",
+      "negative_records": 46,
+      "pc1": 0.454,
+      "pc2": 4.81,
+      "return_rate": 0.0103,
+      "segment": "Frequent buyers",
+      "total_invoices": 224,
+      "total_lines": 4459,
+      "total_spending": 28405.56
+    }
+  ],
+  "total": 4372
+}

@@ -7,23 +7,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style.css?v=20261127b">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
 <header class="top">
-    <div>
-        <h1>Returns &amp; Cancellations</h1>
-        <p>Retail transaction monitoring &amp; predictive pattern analysis</p>
-        <nav class="nav-tabs" aria-label="Stakeholder views">
-            <a href="#overview" class="nav-tab active">Overview</a>
-            <a href="#merchandising" class="nav-tab">Products</a>
-            <a href="#customers" class="nav-tab">Customers</a>
-            <a href="#finance" class="nav-tab">Finance &amp; Risk</a>
-            <a href="#method" class="nav-tab">Method</a>
-        </nav>
+    <div class="top-inner">
+        <div class="brand">
+            <div class="brand-badges">
+                <span class="pill pill-accent">SDC-I ML Project</span>
+                <span class="pill">FastAPI · Random Forest · K-Means · Isolation Forest</span>
+            </div>
+            <h1>Product Return &amp; Cancellation Analysis</h1>
+            <p>Interactive retail transaction monitoring, predictive risk screening &amp; custom dataset analyzer</p>
+        </div>
+        <div class="top-meta">
+            <div class="top-controls">
+                <select id="datasetSelector" class="dataset-select" aria-label="Active dataset">
+                    <option value="default">UCI Online Retail (Default)</option>
+                </select>
+                <button type="button" id="themeToggle" class="theme-btn" title="Toggle light or dark theme">Dark Mode</button>
+                <span class="status-pill"><i class="dot"></i> API Live</span>
+            </div>
+            <p class="period" id="period"></p>
+        </div>
     </div>
-    <p class="period" id="period"></p>
+    <nav class="nav-tabs" aria-label="Stakeholder views">
+        <a href="#overview" class="nav-tab active">Overview</a>
+        <a href="#merchandising" class="nav-tab">Products</a>
+        <a href="#customers" class="nav-tab">Customers</a>
+        <a href="#finance" class="nav-tab">Finance &amp; Risk</a>
+        <a href="#method" class="nav-tab">Method &amp; Predictor</a>
+        <a href="#upload" class="nav-tab nav-tab-cta">Analyze Your Data</a>
+    </nav>
 </header>
 
 <div id="error" class="error" role="alert" hidden></div>
@@ -38,6 +54,8 @@
             <div><span>Flagged lines</span><strong id="k-flagged">–</strong></div>
             <div><span>Value returned</span><strong id="k-value">–</strong></div>
         </section>
+
+        <section class="insights-strip" id="insightsStrip" aria-label="Automated insights" hidden></section>
 
         <section class="grid" style="margin-top: 20px;">
             <article class="panel">
@@ -212,19 +230,41 @@
 
         <section class="panel predictor" style="margin-top: 20px;">
             <div>
-                <h2>Classify an invoice</h2>
-                <p class="note">Baseline model: does an invoice with these details look like a cancellation? It describes the invoice; it does not predict the future.</p>
-                <form id="predictForm" novalidate>
-                    <label>Line items<input name="line_count" type="number" min="1" value="8"></label>
-                    <label>Unique products<input name="unique_products" type="number" min="1" value="8"></label>
-                    <label>Total units<input name="total_abs_quantity" type="number" min="1" value="60"></label>
-                    <label>Average unit price (£)<input name="average_unit_price" type="number" min="0" step="0.01" value="3.5"></label>
-                    <label>Month<select name="month"></select></label>
-                    <label>Weekday<select name="weekday"></select></label>
-                    <label>Hour (0–23)<input name="hour" type="number" min="0" max="23" value="12"></label>
-                    <label>Country<select name="country" id="countrySelect"></select></label>
-                    <button type="submit">Estimate risk</button>
-                </form>
+                <div class="table-head" style="margin-bottom:8px;">
+                    <h2 id="predictorHeading">Classify an invoice</h2>
+                    <div class="pred-switch" role="tablist" aria-label="Predictor mode">
+                        <button type="button" id="tabInvoicePred" class="pred-tab active">Invoice Risk</button>
+                        <button type="button" id="tabLinePred" class="pred-tab">60-Day Line Return</button>
+                    </div>
+                </div>
+                <div id="invoicePredWrap">
+                    <p class="note">Baseline model: does an invoice with these details look like a cancellation? It describes the invoice; it does not predict the future.</p>
+                    <form id="predictForm" novalidate>
+                        <label>Line items<input name="line_count" type="number" min="1" value="8"></label>
+                        <label>Unique products<input name="unique_products" type="number" min="1" value="8"></label>
+                        <label>Total units<input name="total_abs_quantity" type="number" min="1" value="60"></label>
+                        <label>Average unit price (£)<input name="average_unit_price" type="number" min="0" step="0.01" value="3.5"></label>
+                        <label>Month<select name="month"></select></label>
+                        <label>Weekday<select name="weekday"></select></label>
+                        <label>Hour (0–23)<input name="hour" type="number" min="0" max="23" value="12"></label>
+                        <label>Country<select name="country" id="countrySelect"></select></label>
+                        <button type="submit">Estimate risk</button>
+                    </form>
+                </div>
+                <div id="linePredWrap" hidden>
+                    <p class="note">Defensible target: predicts whether a sold product line will be returned by the same customer within 60 days.</p>
+                    <form id="linePredictForm" novalidate>
+                        <label>Stock code<input name="stock_code" type="text" value="85123A"></label>
+                        <label>Quantity<input name="quantity" type="number" min="1" value="6"></label>
+                        <label>Unit price (£)<input name="unit_price" type="number" min="0.01" step="0.01" value="2.55"></label>
+                        <label>Basket size<input name="basket_size" type="number" min="1" value="12"></label>
+                        <label>Hour (0–23)<input name="hour" type="number" min="0" max="23" value="14"></label>
+                        <label>Weekday<select name="weekday"></select></label>
+                        <label>Country<select name="country"></select></label>
+                        <label>Customer ID (optional)<input name="customer_id" type="number" value="17850"></label>
+                        <button type="submit">Predict 60-day return risk</button>
+                    </form>
+                </div>
             </div>
             <div class="result" id="result" aria-live="polite">
                 <p class="empty">Results appear here.</p>
@@ -265,7 +305,148 @@
             </div>
         </section>
     </div>
+
+    <!-- View 6: Seller / Business Dataset Analyzer (#upload) -->
+    <div id="view-upload" class="view-panel" hidden>
+        <section class="panel">
+            <div class="table-head">
+                <div>
+                    <h2>Upload &amp; Analyze Your Sales File</h2>
+                    <p class="note" style="margin-bottom:0;">Drop any <code>.csv</code> or <code>.xlsx</code> transaction file (with <code>InvoiceNo</code>, <code>Quantity</code>, <code>UnitPrice</code>, <code>InvoiceDate</code>) to score cancellation risk and generate downloadable reports.</p>
+                </div>
+                <a class="button" href="/api/sample-template.csv">Download Sample CSV</a>
+            </div>
+
+            <div id="dropZone" class="dropzone" tabindex="0" role="button" aria-label="Drop CSV or Excel file here or click to browse">
+                <input type="file" id="uploadFileInput" accept=".csv,.xlsx,.xls" hidden>
+                <p id="dropZoneText"><strong>Drag &amp; drop your CSV or Excel file here</strong>, or <span class="cust-link">browse from your computer</span></p>
+                <small id="uploadFileName" style="color:var(--muted);"></small>
+            </div>
+
+            <div class="upload-actions">
+                <button type="button" id="analyzeBtn" class="primary-btn" disabled>Analyze with ML Model</button>
+                <span id="uploadStatus" class="note" style="margin:0;"></span>
+            </div>
+        </section>
+
+        <div id="uploadResults" hidden style="display:grid;gap:20px;margin-top:20px;">
+            <section class="panel">
+                <div class="table-head">
+                    <div>
+                        <h2 id="uploadReportTitle">Analysis Report</h2>
+                        <p class="note" id="uploadReportSub" style="margin-bottom:0;"></p>
+                    </div>
+                    <div class="dl-bar">
+                        <button type="button" id="switchToUploadBtn" class="primary-btn">Open Full Dashboard for This File</button>
+                        <a id="dlInvoicesCsv" class="button" href="#">Scored Invoices (.csv)</a>
+                        <a id="dlFlaggedCsv" class="button" href="#">Flagged Lines (.csv)</a>
+                        <a id="dlSummaryTxt" class="button" href="#">Summary Report (.txt)</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="kpis" aria-label="Uploaded dataset summary">
+                <div><span>Rows analyzed</span><strong id="u-rows">–</strong></div>
+                <div><span>Invoices scored</span><strong id="u-invoices">–</strong></div>
+                <div><span>High-risk invoices</span><strong id="u-highrisk">–</strong><small id="u-medrisk"></small></div>
+                <div><span>Flagged line items</span><strong id="u-flagged">–</strong></div>
+                <div><span>Return / cancel value</span><strong id="u-value">–</strong><small id="u-net"></small></div>
+            </section>
+
+            <section class="grid">
+                <article class="panel">
+                    <h2>Top Flagged Products in Your File</h2>
+                    <div class="plot"><canvas id="uploadProductChart"></canvas></div>
+                </article>
+                <article class="panel">
+                    <h2>Flagged Activity by Country</h2>
+                    <div class="plot"><canvas id="uploadCountryChart"></canvas></div>
+                </article>
+            </section>
+
+            <section class="panel">
+                <h2>Top 50 Invoices by ML Cancellation Risk</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Invoice</th>
+                                <th>Date</th>
+                                <th>Country</th>
+                                <th class="num">Lines</th>
+                                <th class="num">Total Qty</th>
+                                <th class="num">Avg Price</th>
+                                <th class="num">Cancel Prob</th>
+                                <th>Risk Level</th>
+                                <th class="num">Return Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="uploadInvoiceTable"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
 </main>
-<script src="/static/script.js"></script>
+
+<!-- Customer Drill-Down Slide-Over Drawer -->
+<div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+<aside id="customerDrawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <div class="drawer-head">
+        <div>
+            <h2 id="drawerTitle">Customer Profile</h2>
+            <p id="drawerSegment" class="note" style="margin:2px 0 0;"></p>
+        </div>
+        <button type="button" id="drawerClose" aria-label="Close customer drawer">✕</button>
+    </div>
+    <dl id="drawerFacts" class="facts" style="margin-top:16px;"></dl>
+    <h3 style="font-size:.95rem;font-weight:600;margin:18px 0 8px;">Recent Flagged Transactions</h3>
+    <div class="table-wrap" style="margin-top:0;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Invoice</th>
+                    <th>Date</th>
+                    <th>Product</th>
+                    <th class="num">Qty</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody id="drawerRecords"></tbody>
+        </table>
+    </div>
+</aside>
+
+<!-- Animated ML Analyzing Overlay -->
+<div id="analyzingOverlay" class="analyzing-overlay" role="dialog" aria-modal="true" aria-labelledby="analyzingTitle" hidden>
+    <div class="analyzing-card">
+        <div class="scanner-rings" aria-hidden="true">
+            <div class="ring ring-outer"></div>
+            <div class="ring ring-inner"></div>
+            <div class="ring-core">ML</div>
+        </div>
+        <h2 id="analyzingTitle">Analyzing Your Dataset</h2>
+        <p id="analyzeStepLabel" class="analyze-sub">Preparing transaction pipeline...</p>
+        <div class="analyze-progress">
+            <div class="analyze-progress-track">
+                <div id="analyzeProgressFill" class="analyze-progress-fill" style="width: 0%;"></div>
+            </div>
+            <span id="analyzeProgressPct" class="analyze-progress-pct">0%</span>
+        </div>
+        <ul id="analyzeStepsList" class="analyze-steps">
+            <li data-step="0">Parsing CSV/Excel &amp; normalizing columns</li>
+            <li data-step="1">Cleaning dates, quantities &amp; flagging anomalies</li>
+            <li data-step="2">Aggregating invoice-level features</li>
+            <li data-step="3">Scoring cancellation risk with Random Forest</li>
+            <li data-step="4">Generating charts &amp; downloadable reports</li>
+        </ul>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <span>Product Return &amp; Cancellation Pattern Analysis-III · UCI Online Retail Dataset</span>
+    <a href="/docs" target="_blank" rel="noopener">OpenAPI / Swagger Docs ↗</a>
+</footer>
+<script src="/static/script.js?v=20261127b"></script>
 </body>
 </html>

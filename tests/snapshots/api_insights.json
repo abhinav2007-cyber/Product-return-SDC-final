@@ -1,0 +1,12 @@
+{
+  "cancellation_rate": 14.8,
+  "insights": [
+    "Overall invoice cancellation rate is 14.8%.",
+    "Returns peaked in 2011-10.",
+    "Top product associated with returns is 'REGENCY CAKESTAND 3 TIER'.",
+    "Customer 14911 has the highest number of return-related lines."
+  ],
+  "peak_month": "2011-10",
+  "top_customer": "14911",
+  "top_product": "REGENCY CAKESTAND 3 TIER"
+}

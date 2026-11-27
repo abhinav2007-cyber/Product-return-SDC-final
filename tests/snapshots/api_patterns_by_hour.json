@@ -1,0 +1,95 @@
+{
+  "by": "hour",
+  "patterns": [
+    {
+      "cancellation_rate": 0.9545,
+      "cancellations": 21,
+      "hour": 6,
+      "total_invoices": 22
+    },
+    {
+      "cancellation_rate": 0.0645,
+      "cancellations": 2,
+      "hour": 7,
+      "total_invoices": 31
+    },
+    {
+      "cancellation_rate": 0.0865,
+      "cancellations": 54,
+      "hour": 8,
+      "total_invoices": 624
+    },
+    {
+      "cancellation_rate": 0.1283,
+      "cancellations": 234,
+      "hour": 9,
+      "total_invoices": 1824
+    },
+    {
+      "cancellation_rate": 0.1341,
+      "cancellations": 397,
+      "hour": 10,
+      "total_invoices": 2961
+    },
+    {
+      "cancellation_rate": 0.1652,
+      "cancellations": 523,
+      "hour": 11,
+      "total_invoices": 3165
+    },
+    {
+      "cancellation_rate": 0.1257,
+      "cancellations": 498,
+      "hour": 12,
+      "total_invoices": 3961
+    },
+    {
+      "cancellation_rate": 0.1276,
+      "cancellations": 430,
+      "hour": 13,
+      "total_invoices": 3369
+    },
+    {
+      "cancellation_rate": 0.1275,
+      "cancellations": 400,
+      "hour": 14,
+      "total_invoices": 3137
+    },
+    {
+      "cancellation_rate": 0.1307,
+      "cancellations": 401,
+      "hour": 15,
+      "total_invoices": 3069
+    },
+    {
+      "cancellation_rate": 0.2049,
+      "cancellations": 400,
+      "hour": 16,
+      "total_invoices": 1952
+    },
+    {
+      "cancellation_rate": 0.2523,
+      "cancellations": 304,
+      "hour": 17,
+      "total_invoices": 1205
+    },
+    {
+      "cancellation_rate": 0.2673,
+      "cancellations": 89,
+      "hour": 18,
+      "total_invoices": 333
+    },
+    {
+      "cancellation_rate": 0.3333,
+      "cancellations": 73,
+      "hour": 19,
+      "total_invoices": 219
+    },
+    {
+      "cancellation_rate": 0.3571,
+      "cancellations": 10,
+      "hour": 20,
+      "total_invoices": 28
+    }
+  ]
+}

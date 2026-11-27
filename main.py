@@ -4,15 +4,17 @@ Run:
     python -m uvicorn main:app --reload --port 8000
 """
 from contextlib import asynccontextmanager
+import io
 import json
 import logging
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Set
+import uuid
 
 import joblib
 import numpy as np
 import pandas as pd
-from fastapi import FastAPI, HTTPException, Query, Request, status
+from fastapi import FastAPI, File, HTTPException, Query, Request, UploadFile, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
@@ -30,6 +32,8 @@ logger = logging.getLogger("api")
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
+UPLOADS_DIR = BASE_DIR / "uploads"
+UPLOADS_DIR.mkdir(exist_ok=True)
 
 SORTABLE_RECORDS = {"InvoiceNo", "InvoiceDate", "Description", "Quantity", "UnitPrice", "Country", "Return_Value"}
 SORTABLE_PRODUCTS = {"Description", "total_records", "total_quantity", "negative_records", "return_rate"}
@@ -84,20 +88,26 @@ def load_app_state(target_app: FastAPI):
         flagged["Country"].astype(str)
     ).str.lower()
 
-    # Feature 2: Pre-score cancellation risk for every flagged record
+    # Feature 2: Pre-score cancellation risk by scoring invoice-level features and merging onto flagged lines
     try:
         _pipeline = cancel_bundle["pipeline"]
         _threshold = float(cancel_bundle["threshold"])
         _features = cancel_bundle.get("features", FEATURES)
-        _scored_df = add_derived(flagged.copy())[_features]
-        _probs = _pipeline.predict_proba(_scored_df)[:, 1]
-        flagged = flagged.copy()
-        flagged["cancel_prob"] = _probs.round(4)
-        flagged["cancel_risk"] = pd.cut(
-            _probs,
-            bins=[-0.001, _threshold * 0.5, _threshold, 1.001],
-            labels=["Low", "Medium", "High"]
-        ).astype(str)
+        _inv_for_score = invoices.copy()
+        _inv_for_score["InvoiceNo"] = _inv_for_score["InvoiceNo"].astype(str)
+        _probs = _pipeline.predict_proba(add_derived(_inv_for_score)[_features])[:, 1]
+        _score_map = pd.DataFrame({
+            "InvoiceNo": _inv_for_score["InvoiceNo"],
+            "cancel_prob": np.round(_probs, 4),
+            "cancel_risk": pd.cut(
+                _probs,
+                bins=[-0.001, _threshold * 0.5, _threshold, 1.001],
+                labels=["Low", "Medium", "High"],
+            ).astype(str),
+        }).drop_duplicates(subset=["InvoiceNo"])
+        flagged = flagged.merge(_score_map, on="InvoiceNo", how="left")
+        flagged["cancel_prob"] = flagged["cancel_prob"].fillna(0.0)
+        flagged["cancel_risk"] = flagged["cancel_risk"].fillna("Unknown")
     except Exception as _pre_score_err:
         logger.warning("Could not pre-score flagged records: %s", _pre_score_err)
         flagged["cancel_prob"] = 0.0
@@ -124,6 +134,8 @@ def load_app_state(target_app: FastAPI):
     target_app.state.cancel_threshold = float(cancel_bundle["threshold"])
     target_app.state.cancel_features = cancel_bundle.get("features", FEATURES)
     target_app.state.line_bundle = line_bundle
+    if not hasattr(target_app.state, "upload_reports"):
+        target_app.state.upload_reports = {}
 
 
 @asynccontextmanager
@@ -402,13 +414,86 @@ async def predict_return_risk(payload: LineReturnRiskIn, request: Request):
 
 
 # ----------------------------------------------------------------
+# Dataset Context Helper (Default + Uploaded Datasets)
+# ----------------------------------------------------------------
+def _get_dataset(request: Request, dataset_id: str = "default") -> Dict[str, Any]:
+    if not dataset_id or dataset_id == "default":
+        st = request.app.state
+        return {
+            "flagged": st.flagged,
+            "customers": st.customers,
+            "cust_merged": st.cust_merged,
+            "products": st.products,
+            "monthly": st.monthly,
+            "countries": st.countries,
+            "invoices": st.invoices,
+            "segment_summary": st.segment_summary,
+            "segment_points": st.segment_points,
+            "anomalies": st.anomalies,
+            "model_info": st.model_info,
+            "period": st.model_info["period"],
+            "segments_meta": st.model_info["segments"],
+            "anomalies_meta": st.model_info["anomalies"],
+        }
+
+    rep = request.app.state.upload_reports.get(dataset_id)
+    if rep is None:
+        bundle_path = UPLOADS_DIR / dataset_id / "bundle.joblib"
+        if bundle_path.exists():
+            rep = joblib.load(bundle_path)
+            request.app.state.upload_reports[dataset_id] = rep
+    if rep is None or "dataset" not in rep:
+        raise HTTPException(status_code=404, detail=f"Dataset '{dataset_id}' not found")
+    return rep["dataset"]
+
+
+@app.get("/api/datasets", summary="List available datasets (default + uploaded files)")
+async def list_datasets(request: Request):
+    datasets = [{
+        "id": "default",
+        "label": "UCI Online Retail (Default)",
+        "invoices": int(len(request.app.state.invoices)),
+        "period": request.app.state.model_info["period"],
+    }]
+    seen = {"default"}
+    for rid, rep in request.app.state.upload_reports.items():
+        if rid not in seen and "dataset" in rep:
+            seen.add(rid)
+            datasets.append({
+                "id": rid,
+                "label": f"{rep['filename']} ({rid})",
+                "invoices": int(len(rep["dataset"]["invoices"])),
+                "period": rep["dataset"]["period"],
+            })
+    if UPLOADS_DIR.exists():
+        for sub in sorted(UPLOADS_DIR.iterdir(), key=lambda p: p.stat().st_mtime, reverse=True):
+            rid = sub.name
+            bpath = sub / "bundle.joblib"
+            if rid not in seen and bpath.exists():
+                try:
+                    rep = joblib.load(bpath)
+                    request.app.state.upload_reports[rid] = rep
+                    if "dataset" in rep:
+                        seen.add(rid)
+                        datasets.append({
+                            "id": rid,
+                            "label": f"{rep['filename']} ({rid})",
+                            "invoices": int(len(rep["dataset"]["invoices"])),
+                            "period": rep["dataset"]["period"],
+                        })
+                except Exception:
+                    pass
+    return {"datasets": datasets}
+
+
+# ----------------------------------------------------------------
 # Analytics API Endpoints
 # ----------------------------------------------------------------
 @app.get("/api/summary", summary="Summary KPIs for overview")
-async def get_summary(request: Request):
-    invoices = request.app.state.invoices
-    flagged = request.app.state.flagged
-    info = request.app.state.model_info
+async def get_summary(request: Request, dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    invoices = ds["invoices"]
+    flagged = ds["flagged"]
 
     cancelled = int(invoices["is_cancelled"].sum())
     total_inv = len(invoices)
@@ -419,18 +504,19 @@ async def get_summary(request: Request):
         "negative_records": int((flagged["Quantity"] < 0).sum()),
         "flagged_records": len(flagged),
         "return_value": round(float(flagged["Return_Value"].sum()), 2),
-        "period": info["period"],
+        "period": ds["period"],
     }
 
 
 @app.get("/api/charts", summary="Data series for overview charts")
-async def get_charts(request: Request, limit: int = Query(10, ge=1, le=50)):
+async def get_charts(request: Request, limit: int = Query(10, ge=1, le=50), dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
     n = min(limit, 25)
     return {
-        "monthly": request.app.state.monthly.to_dict("records"),
-        "products": request.app.state.products.head(n).to_dict("records"),
-        "customers": request.app.state.customers.head(n).to_dict("records"),
-        "countries": request.app.state.countries.head(15).to_dict("records"),
+        "monthly": ds["monthly"].to_dict("records"),
+        "products": ds["products"].head(n).to_dict("records"),
+        "customers": ds["customers"].head(n).to_dict("records"),
+        "countries": ds["countries"].head(15).to_dict("records"),
     }
 
 
@@ -440,11 +526,12 @@ async def get_model_info(request: Request):
 
 
 @app.get("/api/insights", summary="Automated insight sentences for leadership")
-async def get_insights(request: Request):
-    invoices = request.app.state.invoices
-    monthly = request.app.state.monthly
-    products = request.app.state.products
-    customers = request.app.state.customers
+async def get_insights(request: Request, dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    invoices = ds["invoices"]
+    monthly = ds["monthly"]
+    products = ds["products"]
+    customers = ds["customers"]
 
     peak_month = monthly.sort_values("negative_records", ascending=False).iloc[0]["Month"] if len(monthly) else "N/A"
     top_prod = products.iloc[0]["Description"] if len(products) else "N/A"
@@ -466,9 +553,10 @@ async def get_insights(request: Request):
 
 
 @app.get("/api/finance", summary="Finance and audit risk metrics")
-async def get_finance(request: Request):
-    flagged = request.app.state.flagged
-    invoices = request.app.state.invoices
+async def get_finance(request: Request, dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    flagged = ds["flagged"]
+    invoices = ds["invoices"]
 
     return {
         "total_returned_value": round(float(flagged["Return_Value"].sum()), 2),
@@ -479,32 +567,33 @@ async def get_finance(request: Request):
 
 
 @app.get("/api/segments", summary="Customer clusters and scatter coordinates")
-async def get_segments(request: Request):
-    segment_points = request.app.state.segment_points
-    segment_summary = request.app.state.segment_summary
-    info = request.app.state.model_info
+async def get_segments(request: Request, dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    segment_points = ds["segment_points"]
+    segment_summary = ds["segment_summary"]
 
-    pts = segment_points.sample(min(len(segment_points), 1500), random_state=42)
+    pts = segment_points.sample(min(len(segment_points), 1500), random_state=42) if len(segment_points) else segment_points
     return {
         "summary": segment_summary.to_dict("records"),
-        "points": pts[["CustomerID", "segment", "pc1", "pc2"]].to_dict("records"),
-        **info["segments"],
+        "points": pts[["CustomerID", "segment", "pc1", "pc2"]].to_dict("records") if len(pts) else [],
+        **ds["segments_meta"],
     }
 
 
 @app.get("/api/anomalies", summary="Isolation Forest unusual invoices")
-async def get_anomalies(request: Request, limit: int = Query(20, ge=1, le=100)):
-    anomalies = request.app.state.anomalies
-    info = request.app.state.model_info
+async def get_anomalies(request: Request, limit: int = Query(20, ge=1, le=100), dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    anomalies = ds["anomalies"]
     return {
         "rows": anomalies.head(limit).to_dict("records"),
-        **info["anomalies"],
+        **ds["anomalies_meta"],
     }
 
 
 @app.get("/api/patterns", summary="Temporal cancellation patterns by hour or weekday")
-async def get_patterns(request: Request, by: Literal["hour", "weekday"] = "hour"):
-    invoices = request.app.state.invoices
+async def get_patterns(request: Request, by: Literal["hour", "weekday"] = "hour", dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    invoices = ds["invoices"]
     col = "hour" if by == "hour" else "weekday"
     grp = invoices.groupby(col).agg(
         total_invoices=("InvoiceNo", "count"),
@@ -529,8 +618,9 @@ async def get_records(
     dir: Literal["asc", "desc"] = "desc",
     page: int = Query(1, ge=1),
     per_page: int = Query(15, ge=1, le=100),
+    dataset_id: str = "default",
 ):
-    df = request.app.state.flagged
+    df = _get_dataset(request, dataset_id)["flagged"]
     if q.strip():
         df = df[df["_search"].str.contains(q.strip().lower(), regex=False)]
     if country:
@@ -569,8 +659,9 @@ async def export_records_csv(
     month: int = Query(0, ge=0, le=12),
     sort: str = "InvoiceDate",
     dir: Literal["asc", "desc"] = "desc",
+    dataset_id: str = "default",
 ):
-    df = request.app.state.flagged
+    df = _get_dataset(request, dataset_id)["flagged"]
     if q.strip():
         df = df[df["_search"].str.contains(q.strip().lower(), regex=False)]
     if country:
@@ -592,8 +683,8 @@ async def export_records_csv(
 
 
 @app.get("/api/products.csv", summary="Download full product return statistics as CSV")
-async def export_products_csv(request: Request, q: str = "", sort: str = "negative_records"):
-    df = request.app.state.products
+async def export_products_csv(request: Request, q: str = "", sort: str = "negative_records", dataset_id: str = "default"):
+    df = _get_dataset(request, dataset_id)["products"]
     if q.strip():
         df = df[df["Description"].astype(str).str.lower().str.contains(q.strip().lower(), regex=False)]
     sort_col = sort if sort in SORTABLE_PRODUCTS else "negative_records"
@@ -637,8 +728,9 @@ async def get_products(
     sort: str = "negative_records",
     page: int = Query(1, ge=1),
     per_page: int = Query(15, ge=1, le=100),
+    dataset_id: str = "default",
 ):
-    df = request.app.state.products
+    df = _get_dataset(request, dataset_id)["products"]
     if q.strip():
         df = df[df["Description"].astype(str).str.lower().str.contains(q.strip().lower(), regex=False)]
     if min_lines > 0:
@@ -667,8 +759,9 @@ async def get_customers(
     sort: str = "negative_records",
     page: int = Query(1, ge=1),
     per_page: int = Query(15, ge=1, le=100),
+    dataset_id: str = "default",
 ):
-    df = request.app.state.cust_merged
+    df = _get_dataset(request, dataset_id)["cust_merged"]
     if q.strip():
         df = df[df["CustomerID"].astype(str).str.contains(q.strip(), regex=False)]
     if segment:
@@ -690,20 +783,481 @@ async def get_customers(
 
 
 @app.get("/api/customers/{cid}", summary="Customer profile by ID")
-async def get_customer_by_id(cid: str, request: Request):
-    df = request.app.state.cust_merged
+async def get_customer_by_id(cid: str, request: Request, dataset_id: str = "default"):
+    ds = _get_dataset(request, dataset_id)
+    df = ds["cust_merged"]
     match = df[df["CustomerID"].astype(str) == str(cid)]
     if match.empty:
         raise HTTPException(status_code=404, detail="Customer not found")
 
     cust_info = match.iloc[0].to_dict()
-    flagged = request.app.state.flagged
-    c_flagged = flagged[flagged["CustomerID"] == str(cid)].drop(columns="_search").head(10).to_dict("records")
+    flagged = ds["flagged"]
+    c_flagged = flagged[flagged["CustomerID"].astype(str) == str(cid)].drop(columns="_search").head(10).to_dict("records")
 
     return {
         "customer": cust_info,
         "recent_flagged_records": c_flagged,
     }
+
+
+# ----------------------------------------------------------------
+# Seller / Business Dataset Upload & Report Generation
+# ----------------------------------------------------------------
+_UPLOAD_COL_ALIASES = {
+    "invoiceno": "InvoiceNo", "invoice_no": "InvoiceNo", "invoice": "InvoiceNo", "order_id": "InvoiceNo", "orderid": "InvoiceNo",
+    "stockcode": "StockCode", "stock_code": "StockCode", "sku": "StockCode", "product_id": "StockCode", "item_code": "StockCode",
+    "description": "Description", "product_name": "Description", "product": "Description", "item_name": "Description",
+    "quantity": "Quantity", "qty": "Quantity", "units": "Quantity",
+    "invoicedate": "InvoiceDate", "invoice_date": "InvoiceDate", "date": "InvoiceDate", "order_date": "InvoiceDate",
+    "unitprice": "UnitPrice", "unit_price": "UnitPrice", "price": "UnitPrice", "amount": "UnitPrice",
+    "customerid": "CustomerID", "customer_id": "CustomerID", "customer": "CustomerID",
+    "country": "Country", "region": "Country", "location": "Country",
+}
+
+
+def _normalize_uploaded_df(raw_df: pd.DataFrame) -> pd.DataFrame:
+    """Normalize uploaded CSV/Excel columns and validate required fields."""
+    rename_map = {}
+    for col in raw_df.columns:
+        key = str(col).strip().lower().replace(" ", "_")
+        compact = key.replace("_", "")
+        if key in _UPLOAD_COL_ALIASES:
+            rename_map[col] = _UPLOAD_COL_ALIASES[key]
+        elif compact in _UPLOAD_COL_ALIASES:
+            rename_map[col] = _UPLOAD_COL_ALIASES[compact]
+
+    df = raw_df.rename(columns=rename_map).copy()
+    required = ["InvoiceNo", "Quantity", "UnitPrice", "InvoiceDate"]
+    missing = [c for c in required if c not in df.columns]
+    if missing:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Missing required column(s): {', '.join(missing)}. "
+                "Your file should include InvoiceNo, Quantity, UnitPrice, InvoiceDate "
+                "(plus optional StockCode, Description, CustomerID, Country)."
+            ),
+        )
+
+    if "StockCode" not in df.columns:
+        df["StockCode"] = "00000"
+    if "Description" not in df.columns:
+        df["Description"] = "Unknown Product"
+    if "CustomerID" not in df.columns:
+        df["CustomerID"] = ""
+    if "Country" not in df.columns:
+        df["Country"] = "United Kingdom"
+
+    df["InvoiceNo"] = df["InvoiceNo"].astype(str).str.strip()
+    df["StockCode"] = df["StockCode"].astype(str).str.strip()
+    df["Description"] = df["Description"].fillna("Unknown Product").astype(str).str.strip()
+    df["Country"] = df["Country"].fillna("United Kingdom").astype(str).str.strip()
+    df["Quantity"] = pd.to_numeric(df["Quantity"], errors="coerce")
+    df["UnitPrice"] = pd.to_numeric(df["UnitPrice"], errors="coerce")
+    df = df.dropna(subset=["Quantity", "UnitPrice"]).copy()
+
+    dates = pd.to_datetime(df["InvoiceDate"], format="%d/%m/%y %H:%M", errors="coerce")
+    if dates.isna().mean() > 0.05:
+        dates = pd.to_datetime(df["InvoiceDate"], dayfirst=True, errors="coerce")
+    df["InvoiceDate"] = dates
+    df = df.dropna(subset=["InvoiceDate"]).copy()
+
+    if df.empty:
+        raise HTTPException(status_code=400, detail="No valid rows remained after parsing dates, quantities, and prices.")
+    return df
+
+
+@app.post("/api/analyze-upload", summary="Upload a CSV/Excel sales file for ML cancellation & return analysis")
+async def analyze_uploaded_file(request: Request, file: UploadFile = File(...)):
+    filename = file.filename or "uploaded_data.csv"
+    ext = Path(filename).suffix.lower()
+    raw_bytes = await file.read()
+    if not raw_bytes:
+        raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+
+    try:
+        if ext == ".csv":
+            raw_df = pd.read_csv(io.BytesIO(raw_bytes), dtype={"InvoiceNo": str, "StockCode": str})
+        elif ext in {".xlsx", ".xls"}:
+            raw_df = pd.read_excel(io.BytesIO(raw_bytes), dtype={"InvoiceNo": str, "StockCode": str})
+        else:
+            raise HTTPException(status_code=400, detail="Unsupported file type. Please upload a .csv or .xlsx file.")
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=f"Could not read file: {exc}")
+
+    df = _normalize_uploaded_df(raw_df)
+    df["is_cancelled"] = df["InvoiceNo"].str.startswith("C").astype(int)
+    df["abs_quantity"] = df["Quantity"].abs()
+    df["Gross_Value"] = np.where(df["Quantity"] > 0, df["Quantity"] * df["UnitPrice"], 0.0)
+    df["Return_Value"] = np.where((df["Quantity"] < 0) | (df["is_cancelled"] == 1), df["abs_quantity"] * df["UnitPrice"], 0.0)
+
+    neg = df["Quantity"] < 0
+    reasons = pd.DataFrame({
+        "Cancellation invoice": df["is_cancelled"] == 1,
+        "Negative quantity": neg,
+        "Zero or negative price": df["UnitPrice"] <= 0,
+    })
+    flagged = df[reasons.any(axis=1)].copy()
+    if len(flagged) > 0:
+        flagged["Reason"] = reasons.loc[flagged.index].apply(lambda r: ", ".join(r.index[r]), axis=1)
+        flagged["InvoiceDateStr"] = flagged["InvoiceDate"].dt.strftime("%Y-%m-%d %H:%M")
+    else:
+        flagged["Reason"] = pd.Series(dtype=str)
+        flagged["InvoiceDateStr"] = pd.Series(dtype=str)
+
+    # Aggregate to invoice level and score with the trained ML pipeline
+    inv = df.groupby("InvoiceNo").agg(
+        line_count=("StockCode", "size"),
+        total_abs_quantity=("abs_quantity", "sum"),
+        average_unit_price=("UnitPrice", "mean"),
+        unique_products=("StockCode", "nunique"),
+        InvoiceDate=("InvoiceDate", "first"),
+        country=("Country", "first"),
+        actual_is_cancelled=("is_cancelled", "first"),
+        gross_value=("Gross_Value", "sum"),
+        return_value=("Return_Value", "sum"),
+    ).reset_index()
+    inv["month"] = inv["InvoiceDate"].dt.month
+    inv["weekday"] = inv["InvoiceDate"].dt.dayofweek
+    inv["hour"] = inv["InvoiceDate"].dt.hour
+    inv = add_derived(inv)
+
+    pipeline = request.app.state.cancel_pipeline
+    threshold = float(request.app.state.cancel_threshold)
+    features = request.app.state.cancel_features
+    probs = pipeline.predict_proba(inv[features])[:, 1]
+    inv["cancel_probability"] = np.round(probs, 4)
+    inv["predicted_cancellation"] = (probs >= threshold).astype(int)
+    inv["risk_level"] = np.where(
+        probs >= threshold, "High",
+        np.where(probs >= threshold * 0.5, "Medium", "Low"),
+    )
+    inv["InvoiceDateStr"] = inv["InvoiceDate"].dt.strftime("%Y-%m-%d %H:%M")
+
+    # Summary KPIs
+    gross_total = float(df["Gross_Value"].sum())
+    return_total = float(df["Return_Value"].sum())
+    summary = {
+        "total_rows": int(len(df)),
+        "total_invoices": int(len(inv)),
+        "flagged_rows": int(len(flagged)),
+        "actual_cancellations": int(inv["actual_is_cancelled"].sum()),
+        "high_risk_invoices": int((inv["risk_level"] == "High").sum()),
+        "medium_risk_invoices": int((inv["risk_level"] == "Medium").sum()),
+        "low_risk_invoices": int((inv["risk_level"] == "Low").sum()),
+        "gross_sales": round(gross_total, 2),
+        "return_value": round(return_total, 2),
+        "net_revenue": round(gross_total - return_total, 2),
+        "threshold": round(threshold, 4),
+    }
+
+    # Breakdowns
+    prod_grp = (
+        df.assign(is_neg=(df["Quantity"] < 0).astype(int))
+        .groupby("Description", as_index=False)
+        .agg(
+            total_lines=("InvoiceNo", "count"),
+            negative_lines=("is_neg", "sum"),
+            return_value=("Return_Value", "sum"),
+        )
+    )
+    prod_grp["return_rate"] = (prod_grp["negative_lines"] / prod_grp["total_lines"].clip(lower=1)).round(4)
+    prod_grp["return_value"] = prod_grp["return_value"].round(2)
+    top_products = prod_grp.sort_values(["negative_lines", "return_value"], ascending=False).head(10).to_dict("records")
+
+    country_grp = (
+        df.assign(is_neg=(df["Quantity"] < 0).astype(int))
+        .groupby("Country", as_index=False)
+        .agg(
+            total_lines=("InvoiceNo", "count"),
+            negative_lines=("is_neg", "sum"),
+            return_value=("Return_Value", "sum"),
+        )
+    )
+    country_grp["return_value"] = country_grp["return_value"].round(2)
+    top_countries = country_grp.sort_values(["negative_lines", "total_lines"], ascending=False).head(10).to_dict("records")
+
+    monthly_grp = (
+        df.assign(Month=df["InvoiceDate"].dt.strftime("%Y-%m"), is_neg=(df["Quantity"] < 0).astype(int))
+        .groupby("Month", as_index=False)
+        .agg(total_lines=("InvoiceNo", "count"), negative_lines=("is_neg", "sum"), return_value=("Return_Value", "sum"))
+        .sort_values("Month")
+    )
+    monthly_grp["return_value"] = monthly_grp["return_value"].round(2)
+
+    high_risk_invoices = (
+        inv.sort_values("cancel_probability", ascending=False)
+        .head(50)[
+            [
+                "InvoiceNo", "InvoiceDateStr", "country", "line_count",
+                "total_abs_quantity", "average_unit_price", "cancel_probability",
+                "risk_level", "actual_is_cancelled", "return_value",
+            ]
+        ]
+        .fillna("")
+        .to_dict("records")
+    )
+
+    report_id = str(uuid.uuid4())[:8]
+    reports_store = request.app.state.upload_reports
+    if len(reports_store) >= 10:
+        oldest_key = next(iter(reports_store))
+        reports_store.pop(oldest_key, None)
+
+    invoices_export = inv[[
+        "InvoiceNo", "InvoiceDateStr", "country", "line_count", "unique_products",
+        "total_abs_quantity", "average_unit_price", "gross_value", "return_value",
+        "cancel_probability", "risk_level", "predicted_cancellation", "actual_is_cancelled",
+    ]].rename(columns={"InvoiceDateStr": "InvoiceDate"}).sort_values("cancel_probability", ascending=False)
+
+    flagged_export = flagged[[
+        "InvoiceNo", "InvoiceDateStr", "StockCode", "Description", "Quantity",
+        "UnitPrice", "CustomerID", "Country", "Reason", "Return_Value",
+    ]].rename(columns={"InvoiceDateStr": "InvoiceDate"}) if len(flagged) > 0 else pd.DataFrame(
+        columns=["InvoiceNo", "InvoiceDate", "StockCode", "Description", "Quantity", "UnitPrice", "CustomerID", "Country", "Reason", "Return_Value"]
+    )
+
+    # Build full dashboard dataset bundle so all 5 stakeholder views work dynamically on this upload
+    inv_score_map = inv[["InvoiceNo", "cancel_probability", "risk_level"]].rename(
+        columns={"cancel_probability": "cancel_prob", "risk_level": "cancel_risk"}
+    ).drop_duplicates(subset=["InvoiceNo"])
+    ds_flagged = flagged_export.copy()
+    ds_flagged["CustomerID"] = ds_flagged["CustomerID"].fillna("").astype(str)
+    ds_flagged["InvoiceNo"] = ds_flagged["InvoiceNo"].fillna("").astype(str)
+    ds_flagged = ds_flagged.merge(inv_score_map, on="InvoiceNo", how="left")
+    ds_flagged["cancel_prob"] = ds_flagged["cancel_prob"].fillna(0.0)
+    ds_flagged["cancel_risk"] = ds_flagged["cancel_risk"].fillna("Unknown")
+    ds_flagged["_search"] = (
+        ds_flagged["InvoiceNo"].astype(str) + " " +
+        ds_flagged["Description"].astype(str) + " " +
+        ds_flagged["CustomerID"].astype(str) + " " +
+        ds_flagged["Country"].astype(str)
+    ).str.lower()
+
+    ds_monthly = (
+        df.assign(Month=df["InvoiceDate"].dt.strftime("%Y-%m"), is_neg=(df["Quantity"] < 0).astype(int))
+        .groupby("Month", as_index=False)
+        .agg(negative_records=("is_neg", "sum"), return_value=("Return_Value", "sum"))
+        .sort_values("Month")
+    )
+    ds_monthly["return_value"] = ds_monthly["return_value"].round(2)
+
+    ds_countries = (
+        df.assign(is_neg=(df["Quantity"] < 0).astype(int))
+        .groupby("Country", as_index=False)
+        .agg(negative_records=("is_neg", "sum"), return_value=("Return_Value", "sum"))
+        .sort_values("negative_records", ascending=False)
+    )
+    ds_countries["return_value"] = ds_countries["return_value"].round(2)
+
+    ds_products = (
+        df.assign(is_neg=(df["Quantity"] < 0).astype(int))
+        .groupby("Description", as_index=False)
+        .agg(
+            total_records=("InvoiceNo", "count"),
+            total_quantity=("Quantity", "sum"),
+            negative_records=("is_neg", "sum"),
+        )
+        .assign(return_rate=lambda d: (d["negative_records"] / d["total_records"].clip(lower=1)).round(4))
+        .sort_values("negative_records", ascending=False)
+    )
+
+    cust_df = df[df["CustomerID"].astype(str).str.strip() != ""].copy()
+    if len(cust_df) > 0:
+        ds_customers = (
+            cust_df.assign(value=cust_df["Quantity"] * cust_df["UnitPrice"], is_neg=(cust_df["Quantity"] < 0).astype(int))
+            .groupby("CustomerID", as_index=False)
+            .agg(
+                total_invoices=("InvoiceNo", "nunique"),
+                total_lines=("InvoiceNo", "size"),
+                negative_records=("is_neg", "sum"),
+                total_spending=("value", "sum"),
+            )
+            .assign(return_rate=lambda d: (d["negative_records"] / d["total_lines"].clip(lower=1)).round(4))
+            .sort_values("negative_records", ascending=False)
+        )
+        ds_customers["CustomerID"] = ds_customers["CustomerID"].astype(str)
+    else:
+        ds_customers = pd.DataFrame(columns=["CustomerID", "total_invoices", "total_lines", "negative_records", "total_spending", "return_rate"])
+
+    ds_cust_merged = ds_customers.copy()
+    ds_cust_merged["segment"] = "Uploaded Cohort"
+    ds_cust_merged["pc1"] = 0.0
+    ds_cust_merged["pc2"] = 0.0
+    ds_seg_points = ds_cust_merged[["CustomerID", "segment", "pc1", "pc2"]].copy()
+    ds_seg_summary = pd.DataFrame([{
+        "segment": "Uploaded Cohort",
+        "customers": int(len(ds_customers)),
+        "median_invoices": float(ds_customers["total_invoices"].median()) if len(ds_customers) else 0.0,
+        "return_rate": float(ds_customers["return_rate"].mean()) if len(ds_customers) else 0.0,
+        "share_of_returned_value": 1.0 if len(ds_customers) else 0.0,
+    }])
+
+    ds_anomalies = (
+        inv.sort_values("total_abs_quantity", ascending=False)
+        .head(20)
+        .assign(
+            type=lambda d: np.where(d["actual_is_cancelled"] == 1, "Cancellation", "Sale"),
+            why=lambda d: "High unit volume (" + d["total_abs_quantity"].astype(int).astype(str) + " units)",
+        )[["InvoiceNo", "type", "total_abs_quantity", "return_value", "why"]]
+        .rename(columns={"total_abs_quantity": "units", "return_value": "value"})
+    )
+
+    ds_invoices = inv.rename(columns={"actual_is_cancelled": "is_cancelled"}).copy()
+    ds_period = {
+        "start": df["InvoiceDate"].min().strftime("%d %b %Y"),
+        "end": df["InvoiceDate"].max().strftime("%d %b %Y"),
+    }
+
+    report_bundle = {
+        "filename": filename,
+        "summary": summary,
+        "invoices_df": invoices_export,
+        "flagged_df": flagged_export,
+        "top_products": top_products,
+        "top_countries": top_countries,
+        "dataset": {
+            "flagged": ds_flagged,
+            "customers": ds_customers,
+            "cust_merged": ds_cust_merged,
+            "products": ds_products,
+            "monthly": ds_monthly,
+            "countries": ds_countries,
+            "invoices": ds_invoices,
+            "segment_summary": ds_seg_summary,
+            "segment_points": ds_seg_points,
+            "anomalies": ds_anomalies,
+            "model_info": request.app.state.model_info,
+            "period": ds_period,
+            "segments_meta": {"k": 1, "silhouette": 0.0},
+            "anomalies_meta": {"flagged": int(len(ds_anomalies)), "invoices": int(len(ds_invoices))},
+        },
+    }
+    reports_store[report_id] = report_bundle
+    try:
+        rep_dir = UPLOADS_DIR / report_id
+        rep_dir.mkdir(parents=True, exist_ok=True)
+        joblib.dump(report_bundle, rep_dir / "bundle.joblib")
+    except Exception as save_err:
+        logger.warning("Could not persist upload report %s: %s", report_id, save_err)
+
+    return {
+        "report_id": report_id,
+        "filename": filename,
+        "summary": summary,
+        "top_products": top_products,
+        "countries": top_countries,
+        "monthly": monthly_grp.to_dict("records"),
+        "high_risk_invoices": high_risk_invoices,
+        "download_urls": {
+            "invoices_csv": f"/api/upload-report/{report_id}/invoices.csv",
+            "flagged_csv": f"/api/upload-report/{report_id}/flagged.csv",
+            "summary_txt": f"/api/upload-report/{report_id}/summary.txt",
+        },
+    }
+
+
+def _load_upload_report(request: Request, report_id: str) -> Dict[str, Any]:
+    rep = request.app.state.upload_reports.get(report_id)
+    if rep is None:
+        bpath = UPLOADS_DIR / report_id / "bundle.joblib"
+        if bpath.exists():
+            rep = joblib.load(bpath)
+            request.app.state.upload_reports[report_id] = rep
+    if not rep:
+        raise HTTPException(status_code=404, detail="Upload report not found or expired. Please re-upload your file.")
+    return rep
+
+
+@app.get("/api/upload-report/{report_id}/invoices.csv", summary="Download ML-scored invoices CSV for an uploaded file")
+async def download_upload_invoices_csv(report_id: str, request: Request):
+    rep = _load_upload_report(request, report_id)
+    stem = Path(rep["filename"]).stem
+    return Response(
+        content=rep["invoices_df"].to_csv(index=False),
+        media_type="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={stem}_scored_invoices.csv"},
+    )
+
+
+@app.get("/api/upload-report/{report_id}/flagged.csv", summary="Download flagged return/cancellation lines CSV for an uploaded file")
+async def download_upload_flagged_csv(report_id: str, request: Request):
+    rep = _load_upload_report(request, report_id)
+    stem = Path(rep["filename"]).stem
+    return Response(
+        content=rep["flagged_df"].to_csv(index=False),
+        media_type="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={stem}_flagged_records.csv"},
+    )
+
+
+@app.get("/api/upload-report/{report_id}/summary.txt", summary="Download executive summary report for an uploaded file")
+async def download_upload_summary_txt(report_id: str, request: Request):
+    rep = _load_upload_report(request, report_id)
+    s = rep["summary"]
+    lines = [
+        "PRODUCT RETURN & CANCELLATION ANALYSIS REPORT",
+        "=" * 52,
+        f"Source File            : {rep['filename']}",
+        f"Report ID              : {report_id}",
+        f"Model Decision Thresh  : {s['threshold'] * 100:.1f}%",
+        "",
+        "EXECUTIVE SUMMARY",
+        "-" * 52,
+        f"Total Line Items       : {s['total_rows']:,}",
+        f"Total Invoices         : {s['total_invoices']:,}",
+        f"Flagged Line Items     : {s['flagged_rows']:,}",
+        f"Actual Cancellations   : {s['actual_cancellations']:,}",
+        f"High-Risk Invoices     : {s['high_risk_invoices']:,}",
+        f"Medium-Risk Invoices   : {s['medium_risk_invoices']:,}",
+        f"Low-Risk Invoices      : {s['low_risk_invoices']:,}",
+        f"Gross Sales Value      : £{s['gross_sales']:,.2f}",
+        f"Returned/Cancelled Val : £{s['return_value']:,.2f}",
+        f"Net Revenue            : £{s['net_revenue']:,.2f}",
+        "",
+        "TOP FLAGGED PRODUCTS",
+        "-" * 52,
+    ]
+    for p in rep["top_products"]:
+        lines.append(
+            f"- {p['Description']} | Neg Lines: {p['negative_lines']}/{p['total_lines']} "
+            f"({p['return_rate'] * 100:.1f}%) | Return Value: £{p['return_value']:,.2f}"
+        )
+    lines.extend(["", "TOP COUNTRIES", "-" * 52])
+    for c in rep["top_countries"]:
+        lines.append(
+            f"- {c['Country']} | Neg Lines: {c['negative_lines']}/{c['total_lines']} "
+            f"| Return Value: £{c['return_value']:,.2f}"
+        )
+    stem = Path(rep["filename"]).stem
+    return Response(
+        content="\n".join(lines),
+        media_type="text/plain; charset=utf-8",
+        headers={"Content-Disposition": f"attachment; filename={stem}_analysis_report.txt"},
+    )
+
+
+@app.get("/api/sample-template.csv", summary="Download a sample CSV file to test the dataset uploader")
+async def download_sample_template():
+    raw_path = BASE_DIR / "Online Retail.csv"
+    if raw_path.exists():
+        sample_df = pd.read_csv(raw_path, nrows=300, dtype={"InvoiceNo": str, "StockCode": str})
+        csv_text = sample_df.to_csv(index=False)
+    else:
+        csv_text = (
+            "InvoiceNo,StockCode,Description,Quantity,InvoiceDate,UnitPrice,CustomerID,Country\n"
+            "536365,85123A,WHITE HANGING HEART T-LIGHT HOLDER,6,01/12/10 08:26,2.55,17850,United Kingdom\n"
+            "C536379,D,Discount,-1,01/12/10 09:41,27.50,14527,United Kingdom\n"
+            "536381,22633,HAND WARMER UNION JACK,6,01/12/10 09:41,1.85,15311,United Kingdom\n"
+            "C536383,35004C,SET OF 3 COLOURED FLYING DUCKS,-1,01/12/10 09:49,4.65,15311,United Kingdom\n"
+        )
+    return Response(
+        content=csv_text,
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=sample_sales_upload.csv"},
+    )
 
 
 if __name__ == "__main__":

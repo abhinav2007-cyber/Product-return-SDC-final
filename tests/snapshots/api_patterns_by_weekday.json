@@ -1,0 +1,41 @@
+{
+  "by": "weekday",
+  "patterns": [
+    {
+      "cancellation_rate": 0.1735,
+      "cancellations": 718,
+      "total_invoices": 4138,
+      "weekday": 0
+    },
+    {
+      "cancellation_rate": 0.1586,
+      "cancellations": 749,
+      "total_invoices": 4722,
+      "weekday": 1
+    },
+    {
+      "cancellation_rate": 0.1398,
+      "cancellations": 673,
+      "total_invoices": 4815,
+      "weekday": 2
+    },
+    {
+      "cancellation_rate": 0.1716,
+      "cancellations": 971,
+      "total_invoices": 5660,
+      "weekday": 3
+    },
+    {
+      "cancellation_rate": 0.1317,
+      "cancellations": 551,
+      "total_invoices": 4184,
+      "weekday": 4
+    },
+    {
+      "cancellation_rate": 0.0731,
+      "cancellations": 174,
+      "total_invoices": 2381,
+      "weekday": 6
+    }
+  ]
+}
